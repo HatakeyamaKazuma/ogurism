@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OGURISM</title>
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- フォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shippori+Mincho&display=swap"
+        rel="stylesheet">
+    <!-- フォント読み込み -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <figure class="header__logo">
+            <img class="default" src="./image/header__logo.png" alt="">
+            <img class="open" src="./image/header__logo--gray.png" alt="">
+        </figure>
+        <ul class="header__link pc_only garamond">
+            <li class="header__link--text">
+                <a href="">
+                    TOP
+                </a>
+            </li>
+            <li class="header__link--text">
+                <a href="">
+                    Business
+                </a>
+            </li>
+            <li class="header__link--text">
+                <a href="">
+                    Artist
+                </a>
+            </li>
+        </ul>
+        <button id="headerButton" class="header__button">
+            <span class="header__button--line">
+            </span>
+        </button>
+        <nav class="header__nav">
+            <ul class="nav__list garamond">
+                <li class="nav__contents">
+                    <a href="">Top</a>
+                </li>
+                <li class="nav__contents pc_only">
+                    <a href="">News</a>
+                </li>
+                <li class="nav__contents accordion">
+                    <p class="accordion__title">
+                        <a href="">Business</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__contents accordion">
+                    <p class="accordion__title">
+                        <a href="">Artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="header__nav--text serif">明日を変える、新しい風を作る。</p>
+            <figure class="nav__image">
+                <picture>
+                    <source srcset="./image/nav__image--pc.png" media="(min-width: 750px)">
+                    <img src="./image/nav__image--sp.png" alt="">
+                </picture>
+            </figure>
+        </nav>
+    </header>
+    <!-- ヘッダー -->
+
+    <!-- メイン -->
+    <div id="preloader">
+        <div class="loader-images">
+            <img src="./image/hh_01.png" class="loader-img" />
+            <img src="./image/hh_02.png" class="loader-img" />
+            <img src="./image/hh_03.png" class="loader-img" />
+            <img src="./image/hh_04.png" class="loader-img" />
+            <img src="./image/hh_05.png" class="loader-img" />
+        </div>
+    </div>
+
+    <main class="main">
+        <section id="mainVisual" class="main__visual">
+            <video class="fix__video sp_only" src="./video/20250401_1080_1920_mv_sp.mp4"
+                poster="./image/about__movie--sp.png" loop muted autoplay playsinline></video>
+            <video class="fix__video pc_only" src="./video/20250401_1080_1920_mv_pc.mp4"
+                poster="./image/about__movie--pc.png" loop muted autoplay playsinline></video>
+            <h2 class="main__visual--text serif fade">明日を変える、<br class="sp_only">新しい風を作る。</h2>
+            <span class="bar"></span>
+        </section>
+
+        <section id="News" class="news fade">
+            <h2 class="title garamond">News</h2>
+
+            <div class="pc__flex">
+                <div class="business">
+                    <p class="sub__title garamond">
+                        Business
+                    </p>
+                    <div class="business__swiper serif">
+                        <div class="swiper-wrapper">
+                            <!-- スライド -->
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artist">
+                    <p class="sub__title garamond">
+                        Artist
+                    </p>
+                    <div class="artist__swiper serif">
+                        <!-- 必要に応じたwrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- スライド -->
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <figure class="news__img">
+                                        <img src="./image/news__img.png" alt="">
+                                    </figure>
+                                    <p class="news__text">
+                                        <span class="news__date">250505</span>|<span
+                                            class="news__category">News</span><br>
+                                        テキストテキストテキストテキストテキストテキストテキ
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view_all">
+                <a href="">
+                    <p class="view_all__text serif">View All</p>
+                    <div class="view_all__button">
+                        <span class="arrow"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="background"></div>
+        </section>
+
+        <section id="About" class="about fade">
+            <h2 class="title garamond">
+                About us
+            </h2>
+            <p class="sub_title serif">
+                企業の成長と革新を支える<br class="sp_only">
+                パートナーとして、<br>
+                戦略的なアドバイスと課題解<br class="sp_only">
+                決を提供します。
+            </p>
+            <p class="text serif">
+                ビジネスリーダーとしての視点から、組織の変革や人材の育成を支援し、<br class="pc_only">持続可能な成功を築くための道筋を共に歩みます。<br>
+                また業界をリードする知見を広めるべく、<br>
+                定期的な講演や著作活動を通じて価値ある情報を<br class="sp_only">
+                提供しています。<br>
+                私たちの使命は、クライアントが直面する課題に真摯に向き合い、確かな信頼を築き上げることです。<br>
+                時代を超えた価値を創造し、共に成長するパートナーであり続けます。
+            </p>
+            <figure class="about__img">
+                <picture>
+                    <source srcset="./image/about__movie--pc.png" media="(min-width: 750px)">
+                    <img src="./image/about__movie--sp.png" alt="">
+                </picture>
+            </figure>
+        </section>
+
+        <section id="Projects" class="projects">
+            <h2 class="title garamond pc_only">Projects</h2>
+
+            <div class="projects__flex">
+                <article id="Business" class="business contents fade__bg">
+                    <h3 class="title cormorant"><span class="num">01 </span>Business</h3>
+                    <p class="text serif">
+                        企業の成長を加速させる戦略的なサポートを提供。経営層との密接な連携を通じて、組織の変革、リーダーシップの育成、そして持続可能な成長のための実践的なアドバイスを行います。<br>
+                        <br>
+                        コンサルティング | アドバイザー | 社外取締役 | 講演・セミナー | 出版
+                    </p>
+                    <a class="button" href="">
+                        <span class="arrow"></span>
+                    </a>
+                </article>
+
+                <article id="Artist" class="artist contents fade__bg">
+                    <h3 class="title cormorant"><span class="num">02 </span>Artist</h3>
+                    <p class="text serif">
+                        オリジナルの楽曲を制作し、CDや各種音楽配信サービスを通じて作品を発信。<br>
+                        音楽の力で心を動かし、世界中の人々とつながることを目指しています。<br>
+                        <br>
+                        アーティストマネジメント | コンサート<br>
+                        | プロデュース | テノール歌手 | 社交ダンス | チアー育成 | クロノグラファ
+                    </p>
+                    <a class="button" href="">
+                        <span class="arrow"></span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="Concept" class="concept serif">
+            <h2 class="title garamond">
+                Concept
+            </h2>
+            <p class="sub_title">
+                「瞬間」に全力を尽くし、<br>
+                丁寧に生きる。
+            </p>
+            <p class="text">
+                風は、新しい流れを呼びこむもの。<br>
+                風の吹く場所はいつも新鮮な空気に満ち、<br>
+                かすかに吹く風も、何かを変える力を宿しています。<br>
+                その大胆で繊細なOGURISMのスピリットを胸に、<br>
+                今日よりもっとよいあしたをめざし新しい風が<br>
+                生まれる場所をつくります。<br>
+                互いに影響しあい、ともに成長できるように。<br>
+                気持ちよくひらかれた場所であり続けます。
+            </p>
+            <article class="side-slide_area">
+                <div class="sticky_wrap">
+                    <figure class="logo">
+                        <img src="./image/concept__logo.png" alt="">
+                    </figure>
+                    <ul class="image__list">
+                        <li class="image__list--contents">
+                            <img src="./image/concept__01.png" alt="">
+                        </li>
+                        <li class="image__list--contents">
+                            <img src="./image/concept__02.png" alt="">
+                        </li>
+                        <li class="image__list--contents">
+                            <img src="./image/concept__03.png" alt="">
+                        </li>
+                        <li class="image__list--contents">
+                            <img src="./image/concept__04.png" alt="">
+                        </li>
+                        <li class="image__list--contents">
+                            <img src="./image/concept__05.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section id="Contact" class="contact">
+            <div class="contact__text">
+                <h2 class="title garamond">Contact</h2>
+                <p class="text serif">お仕事、取材、採用、その他問い合わせについては<br>電話もしくはメールよりご連絡ください。</p>
+            </div>
+            <a class="button" href="">
+                <span class="arrow"></span>
+            </a>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <ul class="nav__list garamond">
+                <li class="nav__contents">
+                    <a href="">Top</a>
+                </li>
+                <li class="nav__contents accordion">
+                    <p class="accordion__title">
+                        <a href="">Business</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__contents accordion">
+                    <p class="accordion__title">
+                        <a href="">Artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer__text">
+                <figure class="logo">
+                    <img src="./image/footer__logo.png" alt="">
+                </figure>
+
+                <p class="address serif">
+                    〒107-0062<br>
+                    東京都港区青山 4-17-33 グランカーサ南青山<br class="sp_only">2F
+                </p>
+                <p class="name serif">
+                    代表取締役社長　小栗成男
+                </p>
+                <p class="telephone serif">
+                    TEL:000-000-0000
+                </p>
+            </div>
+        </div>
+        <div class="copy__container garamond">
+            Copyright © 2025 OGRISM Corp. All Rights Reserved.
+        </div>
+    </footer>
+
+
+    <!-- jsの読み込み -->
+    <script type="module" src="./script/index.js"></script>
+</body>
+
+</html>
