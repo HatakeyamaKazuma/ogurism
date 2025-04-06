@@ -55,10 +55,11 @@
                     <a href="">Top</a>
                 </li>
                 <li class="nav__contents pc_only">
-                    <a href="">News</a>
+                    <a href="#News">News</a>
                 </li>
-                <li class="nav__contents accordion">
-                    <p class="accordion__title">
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Business</a>
+                    <!-- <p class="accordion__title">
                         <a href="">Business</a>
                     </p>
                     <ul class="accordion__list">
@@ -71,10 +72,11 @@
                         <li class="accordion__list--contents">
                             <a href="">Text</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li class="nav__contents accordion">
-                    <p class="accordion__title">
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Artist</a>
+                    <!-- <p class="accordion__title">
                         <a href="">Artist</a>
                     </p>
                     <ul class="accordion__list">
@@ -87,7 +89,7 @@
                         <li class="accordion__list--contents">
                             <a href="">Text</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
             </ul>
             <p class="header__nav--text serif">明日を変える、新しい風を作る。</p>
@@ -280,29 +282,27 @@
             <div class="background"></div>
         </section>
 
-        <section id="About" class="about fade">
-            <h2 class="title garamond">
+        <section id="About" class="about">
+            <h2 class="title garamond fade">
                 About us
             </h2>
-            <p class="sub_title serif">
-                企業の成長と革新を支える<br class="sp_only">
-                パートナーとして、<br>
-                戦略的なアドバイスと課題解<br class="sp_only">
-                決を提供します。
+            <p class="sub_title serif fade">
+                企業の成長と革新を支える<br class="sp_only">パートナーとして、<br>
+                戦略的なアドバイスと課題解<br class="sp_only">決を提供します。
             </p>
-            <p class="text serif">
+            <p class="text serif fade">
                 ビジネスリーダーとしての視点から、組織の変革や人材の育成を支援し、<br class="pc_only">持続可能な成功を築くための道筋を共に歩みます。<br>
                 また業界をリードする知見を広めるべく、<br>
-                定期的な講演や著作活動を通じて価値ある情報を<br class="sp_only">
-                提供しています。<br>
+                定期的な講演や著作活動を通じて価値ある情報を<br class="sp_only">提供しています。<br>
                 私たちの使命は、クライアントが直面する課題に真摯に向き合い、確かな信頼を築き上げることです。<br>
                 時代を超えた価値を創造し、共に成長するパートナーであり続けます。
             </p>
-            <figure class="about__img">
-                <picture>
-                    <source srcset="./image/about__movie--pc.png" media="(min-width: 750px)">
-                    <img src="./image/about__movie--sp.png" alt="">
+            <figure class="about__img fade">
+                <picture class="pc_only">
+                    <img src="./image/about__movie--pc.png">
                 </picture>
+                <video class="sp_only" src="./video/20250401_1080_1080_3.mp4" poster="./image/about__movie--sp.png" loop
+                    muted autoplay playsinline></video>
             </figure>
         </section>
 
@@ -363,19 +363,20 @@
                     </figure>
                     <ul class="image__list">
                         <li class="image__list--contents">
-                            <img src="./image/concept__01.png" alt="">
+                            <img src="./image/concept__01.jpg" alt="">
                         </li>
                         <li class="image__list--contents">
-                            <img src="./image/concept__02.png" alt="">
+                            <video src="./video/20250401_1080_1080_3.mp4" poster="./image/about__movie--sp.png" loop
+                                muted autoplay playsinline></video>
                         </li>
                         <li class="image__list--contents">
-                            <img src="./image/concept__03.png" alt="">
+                            <img src="./image/concept__03.jpg" alt="">
                         </li>
                         <li class="image__list--contents">
-                            <img src="./image/concept__04.png" alt="">
+                            <img src="./image/concept__04.jpg" alt="">
                         </li>
                         <li class="image__list--contents">
-                            <img src="./image/concept__05.png" alt="">
+                            <img src="./image/concept__05.jpg" alt="">
                         </li>
                     </ul>
                 </div>
@@ -385,7 +386,7 @@
         <section id="Contact" class="contact">
             <div class="contact__text">
                 <h2 class="title garamond">Contact</h2>
-                <p class="text serif">お仕事、取材、採用、その他問い合わせについては<br>電話もしくはメールよりご連絡ください。</p>
+                <p class="text serif">お仕事、取材、採用、その他問い合わせについては<br>メールよりご連絡ください。</p>
             </div>
             <a class="button" href="">
                 <span class="arrow"></span>
@@ -398,8 +399,9 @@
                 <li class="nav__contents">
                     <a href="">Top</a>
                 </li>
-                <li class="nav__contents accordion">
-                    <p class="accordion__title">
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Business</a>
+                    <!-- <p class="accordion__title">
                         <a href="">Business</a>
                     </p>
                     <ul class="accordion__list">
@@ -412,10 +414,11 @@
                         <li class="accordion__list--contents">
                             <a href="">Text</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li class="nav__contents accordion">
-                    <p class="accordion__title">
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Artist</a>
+                    <!-- <p class="accordion__title">
                         <a href="">Artist</a>
                     </p>
                     <ul class="accordion__list">
@@ -428,7 +431,7 @@
                         <li class="accordion__list--contents">
                             <a href="">Text</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
             </ul>
             <div class="footer__text">
