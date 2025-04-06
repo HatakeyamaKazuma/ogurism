@@ -77,6 +77,7 @@
 /* 表示されている画像 */
 .loader-img.active {
     opacity: 1;
+    transition: opacity 2s ease;
 }
 
 
@@ -281,6 +282,10 @@
 }
 
 .main__visual .fix__video {
+    width: 100vw;
+    height: auto;
+    left: 50%;
+    translate: -50% 0;
     position: fixed;
     top: 0;
     z-index: -1;
@@ -291,6 +296,7 @@
     text-align: center;
     color: #fff;
     line-height: 1.5;
+    padding-left: calc(50*(100vw / 750));
 }
 
 .main__visual .bar {
@@ -324,13 +330,6 @@
         transform: scale(1, 0);
         transform-origin: 0 100%;
     }
-}
-
-/* MV */
-.main__visual .fix__video {
-    width: fit-content;
-    left: 50%;
-    translate: -50% 0;
 }
 
 /* NEWS */
@@ -443,7 +442,7 @@
     background-color: transparent;
     position: absolute;
     border: solid 1px #fff;
-    transition-duration: 500ms;
+    transition-duration: 750ms;
 }
 
 .news .view_all a:hover .view_all__button::before {
@@ -491,7 +490,7 @@
     width: 0;
     aspect-ratio: 1;
     background-color: #fff;
-    transition-duration: 500ms;
+    transition-duration: 750ms;
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -660,7 +659,7 @@
     background-color: transparent;
     position: absolute;
     border: solid 1px #fff;
-    transition-duration: 500ms;
+    transition-duration: 750ms;
 }
 
 .projects .contents .button:hover::before {
@@ -708,7 +707,7 @@
     width: 0;
     aspect-ratio: 1;
     background-color: #fff;
-    transition-duration: 500ms;
+    transition-duration: 750ms;
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -781,7 +780,7 @@
     width: max-content;
     height: calc(680*(100vw/750));
     gap: calc(60*(100vw/750));
-    grid-template-columns: calc(450*(100vw/750)) calc(385*(100vw/750)) calc(265*(100vw/750)) calc(270*(100vw/750)) calc(400*(100vw/750));
+    grid-template-columns: calc(450*(100vw/750)) calc(385*(100vw/750)) calc(450*(100vw/750)) calc(270*(100vw/750)) calc(400*(100vw/750));
     /* overflow-x: scroll; */
     transition: transform 0.1s ease-out;
 }
@@ -856,7 +855,7 @@
     background-color: transparent;
     position: absolute;
     border: solid 1px #fff;
-    transition-duration: 500ms;
+    transition-duration: 750ms;
 }
 
 .contact .button:hover::before {
@@ -904,7 +903,7 @@
     width: 0;
     aspect-ratio: 1;
     background-color: #fff;
-    transition-duration: 500ms;
+    transition-duration: 750ms;
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -1152,9 +1151,15 @@
 
     /* メイン */
     /* MV */
+    .main__visual .fix__video {
+        width: auto;
+        height: 100vh;
+    }
+
     .main__visual--text {
         font-size: calc(64*(100vw/1920));
         line-height: 1;
+        padding: 0;
     }
 
     .main__visual .bar {
@@ -1467,6 +1472,7 @@
     .concept .side-slide_area .image__list--contents:nth-child(5) {
         padding-top: calc(75*(100vw/1920));
     }
+
     /* Concept */
 
     /* Contact */
@@ -1552,7 +1558,7 @@
         display: none;
     }
 
-    .footer__text{
+    .footer__text {
         order: 1;
     }
 
