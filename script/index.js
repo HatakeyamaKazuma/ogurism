@@ -51,18 +51,18 @@ function fadeFunc() {
                 }
             });
         }, {
-            threshold: 0.3  // 要素の10%が表示されたら発火
+            threshold: 0.3
         });
 
-        const fadeAnimeObserver = new IntersectionObserver((entries) => {
+        const fadeAnimeObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-active');
-                    observer.unobserve(entry.target);
+                    observer.unobserve(entry.target); // ←ここ修正
                 }
             });
         }, {
-            threshold: 0.1  // 要素の10%が表示されたら発火
+            threshold: 0.1
         });
 
         fadeBackground.forEach(el => fadeBackgroundObserver.observe(el));
@@ -86,7 +86,7 @@ function heroHeaderFunc() {
 
                 // 次の画像へ
                 current++;
-                setTimeout(fadeImageLoop, 1000); // 1秒ごとに切り替え
+                setTimeout(fadeImageLoop, 1500); // 1秒ごとに切り替え
             } else {
                 // すべて表示したらローディング画面をフェードアウト
                 setTimeout(() => {
@@ -98,7 +98,7 @@ function heroHeaderFunc() {
 
                         // ローディング画面が消えたらスクロールを有効に戻す
                         document.body.style.overflow = "auto";
-                    }, 500); // フェードアウト後に消す
+                    }, 1000); // フェードアウト後に消す
                 }, 1000); // 最後の画像が表示されてから1秒後に消す
             }
         };
@@ -111,7 +111,7 @@ function heroHeaderFunc() {
         setTimeout(() => {
             minimumTimePassed = true;
             tryHidePreloader();
-        }, 6000); // 最低表示時間（5秒）
+        }, 8000); // 最低表示時間（8秒）
 
         window.addEventListener("load", () => {
             loadFinished = true;
