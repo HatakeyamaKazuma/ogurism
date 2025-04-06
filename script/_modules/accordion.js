@@ -1,4 +1,4 @@
-export default function hamburgerFunc() {
+export default function accordionFunc() {
 
     const accordionElements = document.querySelectorAll(".accordion");
     

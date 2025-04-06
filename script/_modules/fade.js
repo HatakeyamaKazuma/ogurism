@@ -1,4 +1,4 @@
-export default function fade() {
+export default function fadeFunc() {
     document.addEventListener('DOMContentLoaded', function () {
         const fadeBackground = document.querySelectorAll('.fade__bg');
         const fadeAnime = document.querySelectorAll('.fade');

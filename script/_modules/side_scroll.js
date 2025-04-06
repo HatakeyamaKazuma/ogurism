@@ -1,4 +1,4 @@
-export default function side_scroll() {
+export default function sideScrollFunc() {
     window.addEventListener('scroll', () => {
         const section = document.querySelector('.side-slide_area');
         const imageList = section.querySelector('.image__list');

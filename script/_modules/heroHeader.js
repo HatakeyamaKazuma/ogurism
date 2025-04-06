@@ -1,4 +1,4 @@
-export default function side_scroll() {
+export default function heroHeaderFunc() {
     document.addEventListener("DOMContentLoaded", () => {
         const images = document.querySelectorAll(".loader-img");
         let current = 0;
