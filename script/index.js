@@ -74,6 +74,7 @@ function heroHeaderFunc() {
     document.addEventListener("DOMContentLoaded", () => {
         const images = document.querySelectorAll(".loader-img");
         const fadeAnime = document.querySelector('.fade__main');
+        const mainVideo = document.querySelectorAll('.fix__video');
 
         let current = 0;
 
@@ -91,6 +92,12 @@ function heroHeaderFunc() {
                 setTimeout(fadeImageLoop, 3000); // 1秒ごとに切り替え
             } else {
                 // すべて表示したらローディング画面をフェードアウト
+
+                // ローディング画面が消えたらMVの文字を有効に戻す
+                mainVideo.forEach(video => video.play().catch((err) => {
+                    console.log('再生できなかった:', err);
+                }));
+
                 setTimeout(() => {
                     const preloader = document.getElementById("preloader");
                     preloader.style.opacity = 0;
@@ -100,6 +107,8 @@ function heroHeaderFunc() {
 
                         // ローディング画面が消えたらスクロールを有効に戻す
                         document.body.style.overflow = "auto";
+
+                        // ローディング画面が消えたらMVの文字を有効に戻す
                         fadeAnime.classList.add('is-active');
                     }, 0); // フェードアウト後に消す
                 }, 1000); // 最後の画像が表示されてから1秒後に消す
