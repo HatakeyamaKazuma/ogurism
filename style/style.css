@@ -304,7 +304,7 @@
 }
 
 .main__visual .fix__video {
-    width: calc(800*(100vw / 750));
+    width: calc(900*(100vw / 750));
     max-width: 750px;
     height: auto;
     left: 50%;
