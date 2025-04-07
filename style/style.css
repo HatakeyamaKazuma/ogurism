@@ -632,7 +632,7 @@
 }
 
 .projects .contents.is-active::before {
-    background-position: center top;
+    background-position: left top;
     opacity: 1;
 }
 
