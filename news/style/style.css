@@ -232,6 +232,12 @@
     padding-block: calc(300*(100vw/750)) calc(250*(100vw/750));
 }
 
+.breadcrumbs{
+    width: calc(674*(100vw/750));
+    font-size: calc(24*(100vw/750));
+    margin-inline: auto;
+}
+
 .main__title {
     width: calc(700*(100vw/750));
     margin-inline: auto;
@@ -532,6 +538,11 @@
     /* NEWS */
     .main {
         padding-block: 250px 110px;
+    }
+
+    .breadcrumbs{
+        width: calc(1700*(100vw/1920));
+        font-size: calc(16*(100vw/1920));
     }
 
     .main__title {
