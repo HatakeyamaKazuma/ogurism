@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS | OGURISM</title>
+    <link rel="icon" href="./favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- フォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shippori+Mincho&display=swap"
+        rel="stylesheet">
+    <!-- フォント読み込み -->
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <figure class="header__logo">
+            <img class="default" src="../image/header__logo.png" alt="">
+            <img class="open" src="../image/header__logo--gray.png" alt="">
+        </figure>
+        <ul class="header__link pc_only garamond">
+            <li class="header__link--text">
+                <a href="">
+                    TOP
+                </a>
+            </li>
+            <li class="header__link--text">
+                <a href="">
+                    Business
+                </a>
+            </li>
+            <li class="header__link--text">
+                <a href="">
+                    Artist
+                </a>
+            </li>
+        </ul>
+        <button id="headerButton" class="header__button">
+            <span class="header__button--line">
+            </span>
+        </button>
+        <nav class="header__nav">
+            <ul class="nav__list garamond">
+                <li class="nav__contents">
+                    <a href="">Top</a>
+                </li>
+                <li class="nav__contents pc_only">
+                    <a href="#News">News</a>
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Business</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Business</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Artist</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+            </ul>
+            <p class="header__nav--text serif">明日を変える、新しい風を作る。</p>
+            <figure class="nav__image">
+                <picture>
+                    <source srcset="../image/nav__image--pc.png" media="(min-width: 750px)">
+                    <img src="../image/nav__image--sp.png" alt="">
+                </picture>
+            </figure>
+        </nav>
+    </header>
+    <!-- ヘッダー -->
+
+    <!-- メイン -->
+    <main class="main">
+        <h2 class="main__title garamond">
+            News
+        </h2>
+        <div class="news">
+            <article class="business">
+                <p class="sub__title garamond">
+                    Business
+                </p>
+                <div class="business__swiper serif">
+                    <ul class="swiper-wrapper">
+                        <!-- スライド -->
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="artist">
+                <p class="sub__title garamond">
+                    Artist
+                </p>
+                <div class="artist__swiper serif">
+                    <!-- 必要に応じたwrapper -->
+                    <ul class="swiper-wrapper">
+                        <!-- スライド -->
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure class="news__img">
+                                    <img src="./image/news__img.png" alt="">
+                                </figure>
+                                <p class="news__text">
+                                    <span class="news__date">250505</span>|<span class="news__category">News</span><br>
+                                    テキストテキストテキストテキストテキストテキストテキ
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+    <!-- メイン -->
+    <footer class="footer">
+        <div class="footer__container">
+            <ul class="nav__list garamond">
+                <li class="nav__contents">
+                    <a href="">Top</a>
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Business</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Business</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Artist</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+            </ul>
+            <div class="footer__text">
+                <figure class="logo">
+                    <img src="../image/footer__logo.png" alt="">
+                </figure>
+
+                <p class="address serif">
+                    〒107-0062<br>
+                    東京都港区青山 4-17-33 グランカーサ南青山<br class="sp_only">2F
+                </p>
+                <p class="name serif">
+                    代表取締役社長　小栗成男
+                </p>
+                <p class="telephone serif">
+                    TEL:000-000-0000
+                </p>
+            </div>
+        </div>
+        <div class="copy__container garamond">
+            Copyright © 2025 OGRISM Corp. All Rights Reserved.
+        </div>
+    </footer>
+
+    
+    <!-- jsの読み込み -->
+    <script type="module" src="./script/index.js"></script>
+</body>
+
+</html>
