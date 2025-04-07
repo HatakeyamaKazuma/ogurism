@@ -292,7 +292,6 @@
 .main {
     position: relative;
     width: 100%;
-    background-color: #E1E1D1;
 }
 
 /* MV */
@@ -603,7 +602,7 @@
 /* Projects */
 .projects {
     width: 100%;
-    background-color: #EAEAE7;
+    background-color: #E1E1D1;
     letter-spacing: 0.1em;
     position: relative;
     z-index: 1;
@@ -1354,6 +1353,7 @@
 
     /* Projects */
     .projects {
+        background-color: #EAEAE7;
         background: url('../image/projects__bg--pc.png') no-repeat center top;
         background-size: cover;
         padding-block: calc(380*(100vw/1920)) calc(400*(100vw/1920));
