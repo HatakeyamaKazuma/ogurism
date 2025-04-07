@@ -229,7 +229,7 @@
 
 .main {
     background-color: #EAEAE7;
-    padding-block: calc(300*(100vw/750)) calc(250*(100vw/750));
+    padding-block: calc(300*(100vw/750)) calc(50*(100vw/750));
 }
 
 .breadcrumbs{
@@ -305,6 +305,7 @@
 .swiper-wrapper {
     width: calc(600*(100vw / 750));
     margin-inline: auto;
+    margin-bottom: calc(170*(100vw / 750));
     display: grid;
     gap: calc(100*(100vw / 750));
 }
@@ -537,7 +538,7 @@
 
     /* NEWS */
     .main {
-        padding-block: 250px 110px;
+        padding-block: 250px 20px;
     }
 
     .breadcrumbs{
@@ -599,6 +600,7 @@
     .swiper-wrapper {
         width: calc(750*(100vw / 1920));
         margin-inline: auto;
+        margin-bottom: calc(170*(100vw / 1920));
         display: grid;
         justify-content: space-between;
         grid-template-columns: repeat(2, calc(350*(100vw/1920)));
