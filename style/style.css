@@ -602,7 +602,7 @@
 /* Projects */
 .projects {
     width: 100%;
-    background-color: #E1E1D1;
+    background: linear-gradient(180deg, #E1E1D1, #EAEAE7);
     letter-spacing: 0.1em;
     position: relative;
     z-index: 1;
