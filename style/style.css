@@ -35,7 +35,7 @@
 }
 
 .fade__main ._02 {
-    transition-delay: 750ms;
+    transition-delay: 1000ms;
 }
 
 .fade.is-active,
@@ -626,6 +626,7 @@
     background-size: cover;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 0;
     pointer-events: none;
 }
