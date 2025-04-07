@@ -76,8 +76,22 @@
 
 /* 表示されている画像 */
 .loader-img.active {
-    opacity: 1;
-    transition: opacity 2s ease;
+    /* opacity: 1; */
+    animation: hero_header_on 2s ease;
+}
+
+@keyframes hero_header_on {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -336,7 +350,7 @@
 .news {
     width: 100%;
     position: relative;
-    padding-block: calc(200*(100vw/800)) calc(250*(100vw/800));
+    padding-block: calc(300*(100vw/800)) calc(250*(100vw/800));
     z-index: 0;
 }
 
@@ -528,7 +542,7 @@
 .about {
     width: 100%;
     position: relative;
-    padding-block: calc(150*(100vw/800)) calc(200*(100vw/800));
+    padding-block: calc(150*(100vw/800)) calc(800*(100vw/800));
     padding-left: calc(75*(100vw/750));
     background-color: #EAEAE7;
     letter-spacing: 0.1em;
@@ -1170,13 +1184,15 @@
 
     /* NEWS */
     .news {
-        padding-block: 250px 110px;
+        padding-block: 300px 110px;
     }
 
     .news::before {
         background-image: url("../image/news__bg--pc.png");
+        width: 100%;
         height: 2500px;
         background-size: cover;
+        background-position-x: center;
     }
 
     .news .title {
@@ -1326,7 +1342,7 @@
     .projects {
         background: url('../image/projects__bg--pc.png') no-repeat center top;
         background-size: cover;
-        padding-block: calc(315*(100vw/1920)) calc(400*(100vw/1920));
+        padding-block: calc(380*(100vw/1920)) calc(400*(100vw/1920));
     }
 
     .projects .title {
