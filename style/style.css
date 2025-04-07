@@ -535,12 +535,12 @@
 }
 
 .news .swiper-slide {
-    transform: scale(0.8) translateY(calc(25*(100vw/750)));
+    transform: scale(0.8) translateY(calc(25*(100vw/750)))!important;
     transition-duration: 800ms;
 }
 
 .news .swiper-slide-active {
-    transform: scale(1);
+    transform: scale(1)!important;
 }
 
 /* swiper TOP */
@@ -1293,7 +1293,7 @@
     }
 
     .news .swiper-slide {
-        max-width: calc(354*(100vw/1920));
+        max-width: calc(354*(100vw/1920))!important;
         transform: scale(1);
     }
 
