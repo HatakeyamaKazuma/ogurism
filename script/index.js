@@ -73,6 +73,8 @@ function fadeFunc() {
 function heroHeaderFunc() {
     document.addEventListener("DOMContentLoaded", () => {
         const images = document.querySelectorAll(".loader-img");
+        const fadeAnime = document.querySelector('.fade__main');
+
         let current = 0;
 
         // ローディング中スクロール禁止
@@ -86,7 +88,7 @@ function heroHeaderFunc() {
 
                 // 次の画像へ
                 current++;
-                setTimeout(fadeImageLoop, 2000); // 1秒ごとに切り替え
+                setTimeout(fadeImageLoop, 3000); // 1秒ごとに切り替え
             } else {
                 // すべて表示したらローディング画面をフェードアウト
                 setTimeout(() => {
@@ -98,7 +100,8 @@ function heroHeaderFunc() {
 
                         // ローディング画面が消えたらスクロールを有効に戻す
                         document.body.style.overflow = "auto";
-                    }, 1000); // フェードアウト後に消す
+                        fadeAnime.classList.add('is-active');
+                    }, 0); // フェードアウト後に消す
                 }, 1000); // 最後の画像が表示されてから1秒後に消す
             }
         };
@@ -111,7 +114,7 @@ function heroHeaderFunc() {
         setTimeout(() => {
             minimumTimePassed = true;
             tryHidePreloader();
-        }, 9500); // 最低表示時間（8秒）
+        }, 6000); // 最低表示時間（8秒）
 
         window.addEventListener("load", () => {
             loadFinished = true;
@@ -132,13 +135,13 @@ function heroHeaderFunc() {
             }
         }
     });
+
 }
 
 function sideScrollFunc() {
     window.addEventListener('scroll', () => {
         const section = document.querySelector('.side-slide_area');
         const imageList = section.querySelector('.image__list');
-        const stickyWrap = section.querySelector('.sticky_wrap');
 
         const rect = section.getBoundingClientRect();
         const startY = window.scrollY + rect.top;
