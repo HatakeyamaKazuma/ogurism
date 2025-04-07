@@ -629,10 +629,10 @@
     left: 0;
     z-index: 0;
     pointer-events: none;
+    background-position: center top;
 }
 
 .projects .contents.is-active::before {
-    background-position: left top;
     opacity: 1;
 }
 
