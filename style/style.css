@@ -350,7 +350,7 @@
 .news {
     width: 100%;
     position: relative;
-    padding-block: calc(300*(100vw/800)) calc(250*(100vw/800));
+    padding-block: calc(300*(100vw/750)) calc(250*(100vw/750));
     z-index: 0;
 }
 
@@ -369,16 +369,16 @@
 .news .title {
     color: #fff;
     text-align: center;
-    font-size: calc(100*(100vw/800));
-    margin-bottom: calc(50*(100vw/800));
+    font-size: calc(100*(100vw/750));
+    margin-bottom: calc(50*(100vw/750));
 }
 
 .news .sub__title {
     width: calc(525*(100vw/750));
     margin-inline: auto;
     color: #fff;
-    font-size: calc(60*(100vw/800));
-    margin-bottom: calc(20*(100vw/800));
+    font-size: calc(60*(100vw/750));
+    margin-bottom: calc(20*(100vw/750));
     position: relative;
 }
 
@@ -542,7 +542,7 @@
 .about {
     width: 100%;
     position: relative;
-    padding-block: calc(150*(100vw/800)) calc(800*(100vw/800));
+    padding-block: calc(150*(100vw/750)) calc(800*(100vw/750));
     padding-left: calc(75*(100vw/750));
     background-color: #EAEAE7;
     letter-spacing: 0.1em;
@@ -829,7 +829,7 @@
 .contact {
     width: 100%;
     position: relative;
-    padding-block: calc(90*(100vw/800)) calc(140*(100vw/800));
+    padding-block: calc(90*(100vw/750)) calc(140*(100vw/750));
     padding-left: calc(37*(100vw/750));
     background-image: url(../image/contact__bg--sp.png);
     background-repeat: no-repeat;
@@ -839,13 +839,13 @@
 }
 
 .contact .title {
-    font-size: calc(100*(100vw/800));
-    margin-bottom: calc(30*(100vw/800));
+    font-size: calc(100*(100vw/750));
+    margin-bottom: calc(30*(100vw/750));
 }
 
 .contact .text {
-    font-size: calc(24*(100vw/800));
-    margin-bottom: calc(30*(100vw/800));
+    font-size: calc(24*(100vw/750));
+    margin-bottom: calc(30*(100vw/750));
     line-height: 1.75;
     margin-bottom: calc(75*(100vw/750));
 }
