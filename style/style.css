@@ -553,7 +553,7 @@
     position: relative;
     padding-block: calc(150*(100vw/750)) calc(800*(100vw/750));
     padding-left: calc(75*(100vw/750));
-    background-color: #EAEAE7;
+    background-color: #E1E1D1;
     letter-spacing: 0.1em;
     z-index: 1;
 }
