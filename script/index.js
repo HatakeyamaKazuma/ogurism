@@ -86,7 +86,7 @@ function heroHeaderFunc() {
 
                 // 次の画像へ
                 current++;
-                setTimeout(fadeImageLoop, 1500); // 1秒ごとに切り替え
+                setTimeout(fadeImageLoop, 2000); // 1秒ごとに切り替え
             } else {
                 // すべて表示したらローディング画面をフェードアウト
                 setTimeout(() => {
@@ -111,7 +111,7 @@ function heroHeaderFunc() {
         setTimeout(() => {
             minimumTimePassed = true;
             tryHidePreloader();
-        }, 8000); // 最低表示時間（8秒）
+        }, 9500); // 最低表示時間（8秒）
 
         window.addEventListener("load", () => {
             loadFinished = true;
@@ -132,7 +132,6 @@ function heroHeaderFunc() {
             }
         }
     });
-
 }
 
 function sideScrollFunc() {
