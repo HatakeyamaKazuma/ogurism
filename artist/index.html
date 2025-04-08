@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artist | OGURISM</title>
+    <link rel="icon" href="../favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- フォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shippori+Mincho&display=swap"
+        rel="stylesheet">
+    <!-- フォント読み込み -->
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <figure class="header__logo">
+            <img class="default" src="../image/header__logo.png" alt="">
+            <img class="open" src="../image/header__logo--gray.png" alt="">
+        </figure>
+        <ul class="header__link pc_only garamond">
+            <li class="header__link--text">
+                <a href="">
+                    TOP
+                </a>
+            </li>
+            <li class="header__link--text">
+                <a href="">
+                    artist
+                </a>
+            </li>
+            <li class="header__link--text">
+                <a href="">
+                    Artist
+                </a>
+            </li>
+        </ul>
+        <button id="headerButton" class="header__button">
+            <span class="header__button--line">
+            </span>
+        </button>
+        <nav class="header__nav">
+            <ul class="nav__list garamond">
+                <li class="nav__contents">
+                    <a href="">Top</a>
+                </li>
+                <li class="nav__contents pc_only">
+                    <a href="/ogurism/news/">News</a>
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">artist</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Artist</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+            </ul>
+            <p class="header__nav--text serif">明日を変える、新しい風を作る。</p>
+            <figure class="nav__image">
+                <picture>
+                    <source srcset="../image/nav__image--pc.png" media="(min-width: 750px)">
+                    <img src="../image/nav__image--sp.png" alt="">
+                </picture>
+            </figure>
+        </nav>
+    </header>
+    <!-- ヘッダー -->
+
+    <!-- メイン -->
+    <main class="main">
+        <figure class="main__image">
+            <img src="./image/main__visual.png" alt="">
+        </figure>
+        <div class="main__title">
+            <h2 class="title garamond">
+                <span class="red">A</span>rtists
+            </h2>
+            <p class="text serif">
+                オリジナルの楽曲を制作し、CDや各種音楽配信サービスを通じて作品を発信。音楽の力で心を動かし、世界中の人々とつながることを目指しています。
+            </p>
+        </div>
+        <ul class="artists__list serif">
+            <li class="artists__list--contents">
+                <p class="en__title cormorant">Sekai</p>
+                <h3 class="jp__title"><span class="red">世</span>歌勳</h3>
+                <p class="text">
+                    テノール歌手"世歌勳（sekai）"は、2015年08月 名古屋国際会議場にて、観客1,500人を前に華々しくデビュー。
+                    世界的な指揮者である小澤征爾氏と親交を深める中、ニューヨークや日本で声楽を学び、その歌声でワールドワイドな活躍をみせています。
+                </p>
+                <figure class="image">
+                    <img src="./image/sekai.png" alt="">
+                </figure>
+                <div class="link">
+                    <a href="https://www.shigeworld.com/">
+                        <p class="link__text serif">SHIGE WORLD<br>公式サイト</p>
+                        <div class="link__button">
+                            <span class="arrow"></span>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="artists__list--contents">
+                <p class="en__title cormorant">Scope of work</p>
+                <h3 class="jp__title"><span class="red">活</span>動範囲</h3>
+                <p class="text">
+                    アーティストのマネジメントや音楽プロデュース、コンサート運営をはじめ、テノール歌手としての活動、社交ダンスやチアリーディングの育成、クロノグラファとしての専門的な取り組みなど、多岐にわたる分野で活動しています。
+                </p>
+                <figure class="image">
+                    <img src="./image/scope.png" alt="">
+                </figure>
+            </li>
+            <li class="artists__list--contents">
+                <p class="en__title cormorant">Music</p>
+                <h3 class="jp__title"><span class="red">音</span>楽作品</h3>
+                <div class="youtube">
+                    <iframe src="https://www.youtube.com/embed/EBmANdSFRgM?si=3biYeiGub7TxP8qL"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="text">
+                    2025.03.06 発売｜ワタシの果て
+                </p>
+            </li>
+            <li class="artists__list--contents">
+                <p class="en__title cormorant">Performance history in Japan and abroad</p>
+                <h3 class="jp__title"><span class="red">国</span>内外での公演実績</h3>
+
+                <ul class="achievements__list">
+                    <li class="achievements__list--contents">
+                        大阪帝国ホテル
+                    </li>
+                    <li class="achievements__list--contents">
+                        バチカン
+                    </li>
+                    <li class="achievements__list--contents">
+                        エジプト
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="link">
+            <a href="https://www.shigeworld.com/">
+                <p class="link__text serif">それより以前の活動はこちらから<br>
+                    SHIGE WORLD 公式サイト</p>
+                <div class="link__button">
+                    <span class="arrow"></span>
+                </div>
+            </a>
+        </div>
+        <p class="breadcrumbs cormorant"><a href="/">Top</a> > Artists</p>
+    </main>
+    <!-- メイン -->
+    <footer class="footer">
+        <div class="footer__container">
+            <ul class="nav__list garamond">
+                <li class="nav__contents">
+                    <a href="">Top</a>
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">artist</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Artist</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+            </ul>
+            <div class="footer__text">
+                <figure class="logo">
+                    <img src="../image/footer__logo.png" alt="">
+                </figure>
+
+                <p class="address serif">
+                    〒107-0062<br>
+                    東京都港区青山 4-17-33 グランカーサ南青山<br class="sp_only">2F
+                </p>
+                <p class="name serif">
+                    代表取締役社長　小栗成男
+                </p>
+                <p class="telephone serif">
+                    TEL:000-000-0000
+                </p>
+            </div>
+        </div>
+        <div class="copy__container garamond">
+            Copyright © 2025 OGRISM Corp. All Rights Reserved.
+        </div>
+    </footer>
+
+
+    <!-- jsの読み込み -->
+    <script type="module" src="./script/index.js"></script>
+</body>
+
+</html>

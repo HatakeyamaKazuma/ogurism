@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business | OGURISM</title>
+    <link rel="icon" href="../favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="../favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- フォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shippori+Mincho&display=swap"
+        rel="stylesheet">
+    <!-- フォント読み込み -->
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <figure class="header__logo">
+            <img class="default" src="../image/header__logo.png" alt="">
+            <img class="open" src="../image/header__logo--gray.png" alt="">
+        </figure>
+        <ul class="header__link pc_only garamond">
+            <li class="header__link--text">
+                <a href="">
+                    TOP
+                </a>
+            </li>
+            <li class="header__link--text">
+                <a href="">
+                    Business
+                </a>
+            </li>
+            <li class="header__link--text">
+                <a href="">
+                    Artist
+                </a>
+            </li>
+        </ul>
+        <button id="headerButton" class="header__button">
+            <span class="header__button--line">
+            </span>
+        </button>
+        <nav class="header__nav">
+            <ul class="nav__list garamond">
+                <li class="nav__contents">
+                    <a href="">Top</a>
+                </li>
+                <li class="nav__contents pc_only">
+                    <a href="/ogurism/news/">News</a>
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Business</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Business</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Artist</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+            </ul>
+            <p class="header__nav--text serif">明日を変える、新しい風を作る。</p>
+            <figure class="nav__image">
+                <picture>
+                    <source srcset="../image/nav__image--pc.png" media="(min-width: 750px)">
+                    <img src="../image/nav__image--sp.png" alt="">
+                </picture>
+            </figure>
+        </nav>
+    </header>
+    <!-- ヘッダー -->
+
+    <!-- メイン -->
+    <main class="main">
+        <figure class="main__image">
+            <img src="./image/main__visual.png" alt="">
+        </figure>
+        <div class="main__title">
+            <h2 class="title garamond">
+                Business
+            </h2>
+            <p class="text serif">
+                企業の成長を加速させる戦略的なサポートを提供。経営層との密接な連携を通じて、組織の変革、リーダーシップの育成、そして持続可能な成長のための実践的なアドバイスを行います。
+            </p>
+        </div>
+        <ul class="business__list serif">
+            <li class="business__list--contents">
+                <p class="en__title cormorant">Consulting</p>
+                <h3 class="jp__title">コンサルティング</h3>
+                <p class="text">
+                    経営、マーケティング、人事など幅広い分野で最適なアドバイスを提供し、実行までサポートします。問題の発見から解決、継続的な改善まで伴走し、<br>成果につなげます。
+                </p>
+            </li>
+            <li class="business__list--contents">
+                <p class="en__title cormorant">Advisor</p>
+                <h3 class="jp__title">アドバイザー（顧問）</h3>
+                <p class="text">
+                    専門知識と経験を活かし、お客様の課題解決や目標達成をサポートします。的確なアドバイスを提供し、最適な選択ができるようお手伝いします。
+                </p>
+            </li>
+            <li class="business__list--contents">
+                <p class="en__title cormorant">Outside Director</p>
+                <h3 class="jp__title">社外取締役</h3>
+                <p class="text">
+                    経営の透明性と健全性を確保するため、独立した立場から客観的な視点で経営を監督・助言します。豊富な経験と専門知識を活かし、企業の持続的な成長に貢献します。
+                </p>
+            </li>
+            <li class="business__list--contents">
+                <p class="en__title cormorant">Collaborative Growth of Talented People</p>
+                <h3 class="jp__title">人財共育</h3>
+                <p class="text">
+                    企業の成長を支えるため、社員一人ひとりのスキル向上とキャリア開発をサポートします。専門的なトレーニングやワークショップを通じて、実践的な知識とスキルを習得し、組織全体の能力向上を目指します。
+                </p>
+            </li>
+            <li class="business__list--contents">
+                <p class="en__title cormorant">Lecture / Seminar</p>
+                <h3 class="jp__title">講演 / セミナー</h3>
+                <p class="text">
+                    業界の専門家による講演やセミナーを通じて、最新の知識や実践的なスキルを学ぶ機会を提供します。参加者が直面する課題に対する解決策を提案し、成長を促進する内容をお届けします。
+                </p>
+                <div class="achievements">
+                    <h4 class="achievements__title">実績一覧</h4>
+                    <ul class="achievements__list">
+                        <li class="achievements__list--contents">
+                            トヨタ自動車
+                        </li>
+                        <li class="achievements__list--contents">
+                            東京海上日動火災保険
+                        </li>
+                        <li class="achievements__list--contents">
+                            三井住友海上保険
+                        </li>
+                        <li class="achievements__list--contents">
+                            あいおい同和損保保険
+                        </li>
+                        <li class="achievements__list--contents">
+                            損保ジャパン保険
+                        </li>
+                        <li class="achievements__list--contents">
+                            豊田通商
+                        </li>
+                        <li class="achievements__list--contents">
+                            中部電力
+                        </li>
+                        <li class="achievements__list--contents">
+                            東邦ガス
+                        </li>
+                        <li class="achievements__list--contents">
+                            同志社大学
+                        </li>
+                        <li class="achievements__list--contents">
+                            武庫川女子大学
+                        </li>
+                        <li class="achievements__list--contents">
+                            南山大学
+                        </li>
+                        <li class="achievements__list--contents">
+                            至学館大学
+                        </li>
+                        <li class="achievements__list--contents">
+                            びわこ学院大学
+                        </li>
+                        <li class="achievements__list--contents">
+                            名古屋市教育委員会
+                        </li>
+                        <li class="achievements__list--contents">
+                            桜美林大学
+                        </li>
+                        <li class="achievements__list--contents">
+                            医療関係、警察関係
+                        </li>
+                        <li class="achievements__list--contents">
+                            商社関係、塾関係
+                        </li>
+                        <li class="achievements__list--contents">
+                            若手経営者の会
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="business__list--contents">
+                <p class="en__title cormorant">Business book publication</p>
+                <h3 class="jp__title">ビジネス書出版</h3>
+                <p class="text">
+                    ビジネス書の出版を通じて、最新の業界知識や実践的なノウハウを広く発信します。<br class="pc_only">専門家による具体的なアドバイスや成功事例を基に、ビジネスの成長を支援する内容を提供します。
+                </p>
+                <ul class="book__list">
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__01.png" alt="">
+                        </figure>
+                        <p class="name">
+                            2025.05 初旬 発売予定<br>
+                            Comig Soon
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__02.png" alt="">
+                        </figure>
+                        <p class="name">
+                            〜エピソードで綴る〜 仕事の流儀自動車ディーラー編　PHP研究所
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__03.png" alt="">
+                        </figure>
+                        <p class="name">
+                            一万人の心を動かす魔法の言葉〜この人と話すとなぜか元気が出る　著者：小栗成男
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__04.png" alt="">
+                        </figure>
+                        <p class="name">
+                            星を抱いた男　著者：松下隆一
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__05.png" alt="">
+                        </figure>
+                        <p class="name">
+                            両方本気　著者：小栗成男
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__06.png" alt="">
+                        </figure>
+                        <p class="name">
+                            もっともっと熱く生きろ　著者：小栗成男
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__07.png" alt="">
+                        </figure>
+                        <p class="name">
+                            一秒宝（いちびょうほう）　著者：小栗成男
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__08.png" alt="">
+                        </figure>
+                        <p class="name">
+                            型やぶりに生きる　著者：小栗成男
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__09.png" alt="">
+                        </figure>
+                        <p class="name">
+                            OGURHYTHM（オグリズム）英語版
+                        </p>
+                    </li>
+                    <li class="book__list--contents">
+                        <figure class="image">
+                            <img src="./image/book__10.png" alt="">
+                        </figure>
+                        <p class="name">
+                            オグリズム - 今日から人生が変わる黄金ルール　著者：小栗成男
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p class="breadcrumbs cormorant"><a href="/">Top</a> > Business</p>
+    </main>
+    <!-- メイン -->
+    <footer class="footer">
+        <div class="footer__container">
+            <ul class="nav__list garamond">
+                <li class="nav__contents">
+                    <a href="">Top</a>
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Business</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Business</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
+                    <a href="">Artist</a>
+                    <!-- <p class="accordion__title">
+                        <a href="">Artist</a>
+                    </p>
+                    <ul class="accordion__list">
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                        <li class="accordion__list--contents">
+                            <a href="">Text</a>
+                        </li>
+                    </ul> -->
+                </li>
+            </ul>
+            <div class="footer__text">
+                <figure class="logo">
+                    <img src="../image/footer__logo.png" alt="">
+                </figure>
+
+                <p class="address serif">
+                    〒107-0062<br>
+                    東京都港区青山 4-17-33 グランカーサ南青山<br class="sp_only">2F
+                </p>
+                <p class="name serif">
+                    代表取締役社長　小栗成男
+                </p>
+                <p class="telephone serif">
+                    TEL:000-000-0000
+                </p>
+            </div>
+        </div>
+        <div class="copy__container garamond">
+            Copyright © 2025 OGRISM Corp. All Rights Reserved.
+        </div>
+    </footer>
+
+
+    <!-- jsの読み込み -->
+    <script type="module" src="./script/index.js"></script>
+</body>
+
+</html>
