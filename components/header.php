@@ -50,4 +50,4 @@
     </nav>
 </header>
 
-<script type="module" src="./script/header.js"></script>
+<script type="module" src="./header.js"></script>
