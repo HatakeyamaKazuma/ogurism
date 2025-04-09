@@ -238,7 +238,7 @@ function slider() {
         effect: 'slide', // スライドのエフェクト（デフォルト）
         speed: 800, // スライドの速度（ミリ秒）
         centeredSlides: true,//真ん中寄せ
-        slidesPerView: 1.4,//枚数指定
+        slidesPerView: 1.6,//枚数指定
     });
 
     const artistSwiper = new Swiper(".artist__swiper", {
@@ -258,7 +258,7 @@ function slider() {
         effect: 'slide', // スライドのエフェクト（デフォルト）
         speed: 800, // スライドの速度（ミリ秒）
         centeredSlides: true,//真ん中寄せ
-        slidesPerView: 1.4,//枚数指定
+        slidesPerView: 1.6,//枚数指定
     });
 }
 
