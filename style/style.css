@@ -592,7 +592,7 @@
     background-size: cover;
     position: absolute;
     left: 0;
-    top: calc(-100*(100vw/750));
+    top: calc(-120*(100vw/750));
     z-index: -1;
 }
 
