@@ -70,6 +70,54 @@ function fadeFunc() {
     });
 }
 
+function headerLogo() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const about = document.getElementById("About");
+        const concept = document.getElementById("Concept");
+        const projects = document.getElementById("Projects");
+
+        const logoFigure = document.querySelector(".header__logo");
+        const defaultLogo = logoFigure.querySelector(".default");
+        const openLogo = logoFigure.querySelector(".open");
+
+        function isInTriggerZone(el, triggerRatio) {
+            const rect = el.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const triggerPoint = windowHeight * triggerRatio;
+
+            return rect.top < triggerPoint && rect.bottom > 0;
+        }
+
+        function checkLogoVisibility() {
+            const isPC = window.innerWidth >= 768;
+
+            // トリガー位置（PCは90%、SPは50%）
+            const triggerRatio = isPC ? 0.1 : 0.1;
+
+            // 対象セクション（デバイスによって切り替え）
+            const targets = isPC ? [projects, concept] : [about, concept];
+
+            // いずれかが範囲に入っていたらロゴ切り替え
+            const shouldChangeLogo = targets.some(section => isInTriggerZone(section, triggerRatio));
+
+            if (shouldChangeLogo) {
+                defaultLogo.style.opacity = "0";
+                openLogo.style.opacity = "1";
+            } else {
+                defaultLogo.style.opacity = "1";
+                openLogo.style.opacity = "0";
+            }
+        }
+
+        // 初回チェック
+        checkLogoVisibility();
+
+        // スクロール・リサイズ時に再チェック
+        window.addEventListener("scroll", checkLogoVisibility);
+        window.addEventListener("resize", checkLogoVisibility);
+    });
+}
+
 function heroHeaderFunc() {
     document.addEventListener("DOMContentLoaded", () => {
         const images = document.querySelectorAll(".loader-img");
@@ -100,7 +148,7 @@ function heroHeaderFunc() {
 
                 setTimeout(() => {
                     const preloader = document.getElementById("preloader");
-                    preloader.style.opacity = 0;
+                    preloader.classList.add('is-active');
                     preloader.style.pointerEvents = "none";
                     setTimeout(() => {
                         preloader.style.display = "none";
@@ -110,7 +158,7 @@ function heroHeaderFunc() {
 
                         // ローディング画面が消えたらMVの文字を有効に戻す
                         fadeAnime.classList.add('is-active');
-                    }, 1000); // フェードアウト後に消す
+                    }, 1500); // フェードアウト後に消す
                 }, 1000); // 最後の画像が表示されてから1秒後に消す
             }
         };
@@ -123,7 +171,7 @@ function heroHeaderFunc() {
         setTimeout(() => {
             minimumTimePassed = true;
             tryHidePreloader();
-        }, 6000); // 最低表示時間（8秒）
+        }, 6000); // 最低表示時間（6秒）
 
         window.addEventListener("load", () => {
             loadFinished = true;
@@ -133,14 +181,14 @@ function heroHeaderFunc() {
         function tryHidePreloader() {
             if (loadFinished && minimumTimePassed) {
                 const preloader = document.getElementById("preloader");
-                preloader.style.opacity = 0;
+                preloader.classList.add('is-active');
                 preloader.style.pointerEvents = "none";
                 setTimeout(() => {
                     preloader.style.display = "none";
 
                     // ローディング画面が消えたらスクロールを有効に戻す
                     document.body.style.overflow = "auto";
-                }, 1000); // フェードアウト後に消す
+                }, 1500); // フェードアウト後に消す
             }
         }
     });
@@ -148,22 +196,33 @@ function heroHeaderFunc() {
 }
 
 function sideScrollFunc() {
-    window.addEventListener('scroll', () => {
-        const section = document.querySelector('.side-slide_area');
-        const imageList = section.querySelector('.image__list');
+    const section = document.querySelector('.side-slide_area');
+    const imageList = section.querySelector('.image__list');
 
-        const rect = section.getBoundingClientRect();
-        const startY = window.scrollY + rect.top;
-        const endY = startY + section.offsetHeight - window.innerHeight;
+    const rect = section.getBoundingClientRect();
+    const startY = window.scrollY + rect.top;
+    const endY = startY + section.offsetHeight - window.innerHeight;
+    const maxScroll = endY - startY;
 
+    let currentX = 0; // 現在の位置
+    let targetX = 0;  // 目標位置
+
+    function animate() {
         const scrollY = window.scrollY;
-        const maxScroll = endY - startY;
         const scrollProgress = Math.min(Math.max(scrollY - startY, 0), maxScroll);
-        const translateX = -scrollProgress;
+        targetX = -scrollProgress;
 
-        imageList.style.transform = `translateX(${translateX}px)`;
-    });
+        // 緩やかに currentX を targetX に近づける
+        currentX += (targetX - currentX) * 0.03;
+
+        imageList.style.transform = `translateX(${currentX}px)`;
+
+        requestAnimationFrame(animate);
+    }
+
+    animate(); // アニメーション開始
 }
+
 
 function slider() {
     const businessSwiper = new Swiper(".business__swiper", {
@@ -206,6 +265,7 @@ function slider() {
 hamburgerFunc();
 accordionFunc();
 fadeFunc();
+headerLogo();
 heroHeaderFunc();
 sideScrollFunc();
 
