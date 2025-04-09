@@ -86,6 +86,10 @@
     translate: -50% -50%;
 }
 
+.loader-img:nth-last-child(1){
+    width: 50%;
+}
+
 /* 表示されている画像 */
 .loader-img.active {
     opacity: 1;
@@ -167,6 +171,13 @@
     position: absolute;
     z-index: 999;
     right: calc(30*(100vw/750));
+}
+
+
+
+._black .header__button::after,
+._black .header__button::before{
+    background-color: #333;
 }
 
 .header__button::after,
@@ -1130,6 +1141,10 @@
     .header__logo .open {
         width: calc(306*(100vw/1920));
         left: 26px;
+    }
+
+    ._black .header__link{
+        color: #333;
     }
 
     .header__link {
