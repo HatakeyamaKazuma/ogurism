@@ -1154,6 +1154,7 @@
         font-size: 20px;
         color: #fff;
         letter-spacing: 0.06em;
+        transition-duration: 1000ms;
     }
 
     .header__button {
