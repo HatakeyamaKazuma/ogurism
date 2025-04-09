@@ -80,6 +80,8 @@ function headerLogo() {
         const defaultLogo = logoFigure.querySelector(".default");
         const openLogo = logoFigure.querySelector(".open");
 
+        const headerContents = document.querySelector(".header");
+
         function isInTriggerZone(el, triggerRatio) {
             const rect = el.getBoundingClientRect();
             const windowHeight = window.innerHeight;
@@ -103,9 +105,11 @@ function headerLogo() {
             if (shouldChangeLogo) {
                 defaultLogo.style.opacity = "0";
                 openLogo.style.opacity = "1";
+                headerContents.classList.add("_black"); 
             } else {
                 defaultLogo.style.opacity = "1";
                 openLogo.style.opacity = "0";
+                headerContents.classList.remove("_black"); 
             }
         }
 
