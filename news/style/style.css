@@ -281,7 +281,8 @@
 
 .news__img {
     width: 100%;
-    aspect-ratio: 1 / 0.704;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
     margin-bottom: calc(30*(100vw/750));
 }
 
