@@ -152,7 +152,7 @@ function heroHeaderFunc() {
         const mainVideo = document.querySelectorAll('.fix__video');
         const preloader = document.getElementById("preloader");
 
-        let current = 0;
+        let current = -1;
         let animationEnded = false;
 
         document.body.style.overflow = "hidden";
