@@ -123,51 +123,71 @@ function headerLogo() {
 }
 
 function heroHeaderFunc() {
+    const isVisited = localStorage.getItem("visited");
+
+    if (isVisited) {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+            preloader.style.display = "none";
+        }
+        document.body.style.overflow = "auto";
+
+        // is-active は初回以外でも必要なら追加
+        const fadeAnime = document.querySelector('.fade__main');
+        fadeAnime?.classList.add('is-active');
+        return;
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
         const images = document.querySelectorAll(".loader-img");
         const fadeAnime = document.querySelector('.fade__main');
         const mainVideo = document.querySelectorAll('.fix__video');
+        const preloader = document.getElementById("preloader");
 
         let current = 0;
+        let animationEnded = false;
 
-        // ローディング中スクロール禁止
         document.body.style.overflow = "hidden";
 
         const fadeImageLoop = () => {
             if (current < images.length) {
-                // 画像を切り替え
                 images.forEach(img => img.classList.remove("active"));
                 images[current].classList.add("active");
-
-                // 次の画像へ
                 current++;
-                setTimeout(fadeImageLoop, 3000); // 1秒ごとに切り替え
+                setTimeout(fadeImageLoop, 3000);
             } else {
-                // すべて表示したらローディング画面をフェードアウト
+                // アニメーション完了フラグをON
+                animationEnded = true;
 
-                // ローディング画面が消えたらMVの文字を有効に戻す
+                // ローディング後の処理へ
                 mainVideo.forEach(video => video.play().catch((err) => {
                     console.log('再生できなかった:', err);
                 }));
 
                 setTimeout(() => {
-                    const preloader = document.getElementById("preloader");
+                    if (!preloader) return;
+
                     preloader.classList.add('is-active');
                     preloader.style.pointerEvents = "none";
+
                     setTimeout(() => {
                         preloader.style.display = "none";
-
-                        // ローディング画面が消えたらスクロールを有効に戻す
                         document.body.style.overflow = "auto";
 
-                        // ローディング画面が消えたらMVの文字を有効に戻す
-                        fadeAnime.classList.add('is-active');
-                    }, 1500); // フェードアウト後に消す
-                }, 1000); // 最後の画像が表示されてから1秒後に消す
+                        // ローディングアニメが終わったあとに is-active を追加
+                        if (animationEnded) {
+                            fadeAnime?.classList.add('is-active');
+                        }
+
+                        // visited フラグ保存
+                        localStorage.setItem("visited", "true");
+
+                    }, 1500);
+                }, 1000);
             }
         };
 
-        fadeImageLoop(); // 画像表示を開始
+        fadeImageLoop();
 
         let loadFinished = false;
         let minimumTimePassed = false;
@@ -175,7 +195,7 @@ function heroHeaderFunc() {
         setTimeout(() => {
             minimumTimePassed = true;
             tryHidePreloader();
-        }, 6000); // 最低表示時間（6秒）
+        }, 6000);
 
         window.addEventListener("load", () => {
             loadFinished = true;
@@ -184,19 +204,25 @@ function heroHeaderFunc() {
 
         function tryHidePreloader() {
             if (loadFinished && minimumTimePassed) {
-                const preloader = document.getElementById("preloader");
+                if (!preloader) return;
+
                 preloader.classList.add('is-active');
                 preloader.style.pointerEvents = "none";
+
                 setTimeout(() => {
                     preloader.style.display = "none";
-
-                    // ローディング画面が消えたらスクロールを有効に戻す
                     document.body.style.overflow = "auto";
-                }, 1500); // フェードアウト後に消す
+
+                    // ここでも fadeAnime を追加しておく（念のため）
+                    if (animationEnded) {
+                        fadeAnime?.classList.add('is-active');
+                    }
+
+                    localStorage.setItem("visited", "true");
+                }, 1500);
             }
         }
     });
-
 }
 
 function sideScrollFunc() {
@@ -227,7 +253,21 @@ function sideScrollFunc() {
     animate(); // アニメーション開始
 }
 
+function copyButton() {
+    const copyButton = document.getElementById("copyButton");
 
+    const email = "〇〇@google.com";
+
+    copyButton.addEventListener("click", () => {
+        navigator.clipboard.writeText(email)
+            .then(() => {
+                alert("テキストがコピーされました");
+            })
+            .catch((err) => {
+                alert("コピーに失敗しました: " + err);
+            });
+    });
+}
 
 function slider() {
     const businessSwiper = new Swiper(".business__swiper", {
@@ -273,6 +313,7 @@ fadeFunc();
 headerLogo();
 heroHeaderFunc();
 sideScrollFunc();
+copyButton();
 
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth <= 750) {
