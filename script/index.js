@@ -159,14 +159,8 @@ function heroHeaderFunc() {
 
         const fadeImageLoop = () => {
             if (current < images.length) {
-                // すべての画像から一旦activeを削除
                 images.forEach(img => img.classList.remove("active"));
-        
-                // 念のため次のイベントループで追加（視覚的チラつきを抑える）
-                requestAnimationFrame(() => {
-                    images[current].classList.add("active");
-                });
-        
+                images[current].classList.add("active");
                 current++;
                 setTimeout(fadeImageLoop, 3000);
             } else {
@@ -238,6 +232,7 @@ function heroHeaderFunc() {
         }
     });
 }
+
 
 
 
