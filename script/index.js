@@ -132,6 +132,14 @@ function heroHeaderFunc() {
         }
         document.body.style.overflow = "auto";
 
+        const mainVideo = document.querySelectorAll('.fix__video');
+
+        // ローディング後の処理へ
+        mainVideo.forEach(video => video.play().catch((err) => {
+            console.log('再生できなかった:', err);
+        }));
+
+
         // is-active は初回以外でも必要なら追加
         const fadeAnime = document.querySelector('.fade__main');
         fadeAnime?.classList.add('is-active');
@@ -224,6 +232,7 @@ function heroHeaderFunc() {
         }
     });
 }
+
 
 function sideScrollFunc() {
     const section = document.querySelector('.side-slide_area');
