@@ -426,10 +426,17 @@
     position: relative;
 }
 
+.news .business .sub__title::after {
+    width: calc(255*(100vw/750));
+}
+
+.news .artist .sub__title::after {
+    width: calc(305*(100vw/750));
+}
+
 .news .sub__title::after {
     content: "";
     position: absolute;
-    width: calc(305*(100vw/750));
     height: 1px;
     background-color: #fff;
     top: 50%;
@@ -814,7 +821,7 @@
 
 .concept .side-slide_area {
     width: 100%;
-    height: calc(5000*(100vw/750));
+    height: calc(4500*(100vw/750));
     position: relative;
 }
 
@@ -1439,6 +1446,7 @@
         display: block;
         width: 100%;
         height: auto;
+        aspect-ratio: 16 / 9;
         padding: calc(40*(100vw/1920));
         position: relative;
         background-size: cover;
@@ -1538,7 +1546,7 @@
     }
 
     .concept .side-slide_area {
-        height: calc(6500*(100vw/1920));
+        height: calc(4000*(100vw/1920));
     }
 
     .concept .side-slide_area .logo {
