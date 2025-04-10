@@ -217,7 +217,7 @@ function sideScrollFunc() {
         targetX = -scrollProgress;
 
         // 緩やかに currentX を targetX に近づける
-        currentX += (targetX - currentX) * 0.03;
+        currentX += (targetX - currentX) * 0.05;
 
         imageList.style.transform = `translateX(${currentX}px)`;
 
@@ -226,6 +226,7 @@ function sideScrollFunc() {
 
     animate(); // アニメーション開始
 }
+
 
 
 function slider() {
