@@ -1292,6 +1292,14 @@
         margin-bottom: calc(20*(100vw/1920));
     }
 
+    .news .business .sub__title::after {
+        width: calc(578*(100vw/1920));
+    }
+    
+    .news .artist .sub__title::after {
+        width: calc(622*(100vw/1920));
+    }
+
     .news .sub__title::after {
         width: calc(578*(100vw/1920));
     }
@@ -1406,6 +1414,8 @@
         font-size: calc(16*(100vw / 1920));
         margin-bottom: 0;
         width: fit-content;
+        line-height: 2.5;
+        letter-spacing: 0.1em;
     }
 
     .about__img {
