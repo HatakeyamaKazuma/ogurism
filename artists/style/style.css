@@ -560,11 +560,11 @@
     }
 
     .header__logo {
-        width: calc(306*(100vw/1920));
+        width: calc(255*(100vw/1920));
     }
 
     .header__logo .open {
-        width: calc(306*(100vw/1920));
+        width: calc(255*(100vw/1920));
         left: 26px;
     }
 
