@@ -15,7 +15,9 @@
     <!-- フォント読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- フォント読み込み -->
 </head>
 
@@ -23,13 +25,15 @@
     <!-- ヘッダー -->
     <header class="header">
         <figure class="header__logo">
-            <img class="default" src="../image/header__logo.png" alt="">
-            <img class="open" src="../image/header__logo--gray.png" alt="">
+            <a href="/">
+                <img class="default" src="../image/header__logo.png" alt="">
+                <img class="open" src="../image/header__logo--gray.png" alt="">
+            </a>
         </figure>
         <ul class="header__link pc_only garamond">
             <li class="header__link--text">
-                <a href="/ogurism/">
-                    TOP
+                <a href="/ogurism/news/">
+                    News
                 </a>
             </li>
             <li class="header__link--text">
@@ -43,14 +47,14 @@
                 </a>
             </li>
         </ul>
-        <button id="headerButton" class="header__button">
+        <button id="headerButton" class="header__button sp_only">
             <span class="header__button--line">
             </span>
         </button>
         <nav class="header__nav">
             <ul class="nav__list garamond">
                 <li class="nav__contents">
-                    <a href="/ogurism/">Top</a>
+                    <a href="">Top</a>
                 </li>
                 <li class="nav__contents pc_only">
                     <a href="/ogurism/news/">News</a>
@@ -93,7 +97,7 @@
             <p class="header__nav--text serif">明日を変える、新しい風を作る。</p>
             <figure class="nav__image">
                 <picture>
-                    <source srcset="../image/nav__image--pc.png" media="(min-width: 750px)">
+                    <source srcset="./image/nav__image--pc.png" media="(min-width: 750px)">
                     <img src="../image/nav__image--sp.png" alt="">
                 </picture>
             </figure>
@@ -171,6 +175,9 @@
                     <li class="achievements__list--contents">
                         エジプト
                     </li>
+                    <li class="achievements__list--contents">
+                        ニューヨークカーネギーホール
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -186,45 +193,19 @@
         <p class="breadcrumbs cormorant"><a href="/">Top</a> > Artists</p>
     </main>
     <!-- メイン -->
+
+    <!-- フッター -->
     <footer class="footer">
         <div class="footer__container">
             <ul class="nav__list garamond">
                 <li class="nav__contents">
-                    <a href="/ogurism/">Top</a>
+                    <a href="/ogurism/news/">News</a>
                 </li>
                 <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
                     <a href="/ogurism/business/">Business</a>
-                    <!-- <p class="accordion__title">
-                        <a href="">artist</a>
-                    </p>
-                    <ul class="accordion__list">
-                        <li class="accordion__list--contents">
-                            <a href="">Text</a>
-                        </li>
-                        <li class="accordion__list--contents">
-                            <a href="">Text</a>
-                        </li>
-                        <li class="accordion__list--contents">
-                            <a href="">Text</a>
-                        </li>
-                    </ul> -->
                 </li>
                 <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
                     <a href="/ogurism/artists/">Artist</a>
-                    <!-- <p class="accordion__title">
-                        <a href="">Artist</a>
-                    </p>
-                    <ul class="accordion__list">
-                        <li class="accordion__list--contents">
-                            <a href="">Text</a>
-                        </li>
-                        <li class="accordion__list--contents">
-                            <a href="">Text</a>
-                        </li>
-                        <li class="accordion__list--contents">
-                            <a href="">Text</a>
-                        </li>
-                    </ul> -->
                 </li>
             </ul>
             <div class="footer__text">
@@ -245,9 +226,10 @@
             </div>
         </div>
         <div class="copy__container garamond">
-            Copyright © 2025 OGRISM Corp. All Rights Reserved.
+            © OGURISM Corp 
         </div>
     </footer>
+    <!-- フッター -->
 
 
     <!-- jsの読み込み -->

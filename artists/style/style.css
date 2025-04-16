@@ -570,7 +570,6 @@
 
     .header__link {
         display: flex;
-        margin-right: calc(235*(100vw/1920));
         gap: 20px;
         font-size: 20px;
         color: #fff;
@@ -759,7 +758,7 @@
     }
 
     .artists__list--contents .achievements__list--contents {
-        font-size: calc(24*(100vw/1920));
+        font-size: calc(16*(100vw/1920));
     }
 
     /* Artists */
