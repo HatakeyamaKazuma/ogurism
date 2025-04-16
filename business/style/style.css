@@ -471,7 +471,6 @@
 
     .header__link {
         display: flex;
-        margin-right: calc(235*(100vw/1920));
         gap: 20px;
         font-size: 20px;
         color: #fff;
