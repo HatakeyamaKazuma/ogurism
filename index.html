@@ -15,7 +15,9 @@
     <!-- フォント読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- フォント読み込み -->
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -26,13 +28,15 @@
     <!-- ヘッダー -->
     <header class="header">
         <figure class="header__logo">
-            <img class="default" src="./image/header__logo.png" alt="">
-            <img class="open" src="./image/header__logo--gray.png" alt="">
+            <a href="/">
+                <img class="default" src="./image/header__logo.png" alt="">
+                <img class="open" src="./image/header__logo--gray.png" alt="">
+            </a>
         </figure>
         <ul class="header__link pc_only garamond">
             <li class="header__link--text">
-                <a href="">
-                    TOP
+                <a href="/ogurism/news/">
+                    News
                 </a>
             </li>
             <li class="header__link--text">
@@ -46,7 +50,7 @@
                 </a>
             </li>
         </ul>
-        <button id="headerButton" class="header__button">
+        <button id="headerButton" class="header__button sp_only">
             <span class="header__button--line">
             </span>
         </button>
@@ -114,11 +118,12 @@
 
     <main class="main">
         <section id="mainVisual" class="main__visual">
-            <video class="fix__video sp_only" src="./video/20250401_1080_1920_mv_sp.mp4"
-                poster="" loop muted playsinline></video>
-            <video class="fix__video pc_only" src="./video/20250401_1080_1920_mv_pc.mp4"
-                poster="" loop muted playsinline></video>
-            <h2 class="main__visual--text serif fade__main"><span class="_01">明日を変える、</span><br class="sp_only"><span class="_02">新しい風を作る。</span></h2>
+            <video class="fix__video sp_only" src="./video/20250401_1080_1920_mv_sp.mp4" poster="" loop muted
+                playsinline></video>
+            <video class="fix__video pc_only" src="./video/20250401_1080_1920_mv_pc.mp4" poster="" loop muted
+                playsinline></video>
+            <h2 class="main__visual--text serif fade__main"><span class="_01">明日を変える、</span><br class="sp_only"><span
+                    class="_02">新しい風を作る。</span></h2>
             <span class="bar"></span>
         </section>
 
@@ -398,11 +403,13 @@
         </section>
     </main>
     <!-- メイン -->
+
+    <!-- フッター -->
     <footer class="footer">
         <div class="footer__container">
             <ul class="nav__list garamond">
                 <li class="nav__contents">
-                    <a href="">Top</a>
+                    <a href="/ogurism/news/">News</a>
                 </li>
                 <li class="nav__contents"><!-- accordionクラス追加で変更可能 -->
                     <a href="/ogurism/business/">Business</a>
@@ -429,9 +436,10 @@
             </div>
         </div>
         <div class="copy__container garamond">
-            Copyright © 2025 OGRISM Corp. All Rights Reserved.
+            © OGURISM Corp 
         </div>
     </footer>
+    <!-- フッター -->
 
     <!-- jsの読み込み -->
     <script type="module" src="./script/index.js"></script>
