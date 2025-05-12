@@ -86,7 +86,7 @@
     translate: -50% -50%;
 }
 
-.loader-img:nth-last-child(1){
+.loader-img:nth-last-child(1) {
     width: 50%;
 }
 
@@ -176,7 +176,7 @@
 
 
 ._black .header__button::after,
-._black .header__button::before{
+._black .header__button::before {
     background-color: #333;
 }
 
@@ -850,7 +850,7 @@
 
 .concept .side-slide_area {
     width: 100%;
-    height: calc(4700*(100vw/750));
+    /* height: calc(4700*(100vw/750)); */
     position: relative;
 }
 
@@ -861,24 +861,26 @@
     top: 50%;
     translate: -50% -50%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 .sticky_wrap {
     display: grid;
     align-items: center;
-    position: sticky;
+    /* position: sticky; */
+    position: relative;
     top: 0;
     height: 100vh;
     overflow: hidden;
 }
 
 .concept .side-slide_area .image__list {
-    display: grid;
-    width: max-content;
+    /* display: grid; */
+    /* width: max-content; */
     height: calc(1000*(100vw/750));
-    gap: calc(80*(100vw/750));
-    grid-template-columns: 0 calc(214*(100vw/750)) calc(522*(100vw/750)) calc(347*(100vw/750)) calc(214*(100vw/750)) calc(522*(100vw/750)) calc(347*(100vw/750));
+    /* gap: calc(80*(100vw/750)); */
+    /* grid-template-columns: 0 calc(214*(100vw/750)) calc(522*(100vw/750)) calc(347*(100vw/750)) calc(214*(100vw/750)) calc(522*(100vw/750)) calc(347*(100vw/750)); */
+    transition-timing-function: linear;
 }
 
 .concept .side-slide_area .image__list--contents {
@@ -892,36 +894,38 @@
     border-radius: calc(10*(100vw/750));
 }
 
-.concept .side-slide_area .image__list--contents:nth-child(1) {
-    opacity: 0;
-}
-
-.concept .side-slide_area .image__list--contents:nth-child(2) {
+.concept .side-slide_area .image__list--contents._01 {
     align-items: center;
     translate: 0 calc(-50*(100vw/750));
+    width: calc(214*(100vw/750));
 }
 
-.concept .side-slide_area .image__list--contents:nth-child(3) {
+.concept .side-slide_area .image__list--contents._02 {
     align-items: flex-start;
+    width: calc(522*(100vw/750));
 }
 
-.concept .side-slide_area .image__list--contents:nth-child(4) {
+.concept .side-slide_area .image__list--contents._03 {
     align-items: center;
     translate: 0 calc(100 * (100vw / 750));
+    width: calc(347*(100vw/750));
 }
 
-.concept .side-slide_area .image__list--contents:nth-child(5) {
+.concept .side-slide_area .image__list--contents._04 {
     align-items: flex-start;
     translate: 0 calc(175 * (100vw / 750));
+    width: calc(214*(100vw/750));
 }
 
-.concept .side-slide_area .image__list--contents:nth-child(6) {
+.concept .side-slide_area .image__list--contents._05 {
     align-items: flex-end;
+    width: calc(522*(100vw/750));
 }
 
-.concept .side-slide_area .image__list--contents:nth-child(7) {
+.concept .side-slide_area .image__list--contents._06 {
     align-items: center;
     translate: calc(-110 * (100vw / 750)) calc(-100 * (100vw / 750));
+    width: calc(347*(100vw/750));
 }
 
 /* Concept */
@@ -1179,7 +1183,7 @@
         left: 26px;
     }
 
-    ._black .header__link{
+    ._black .header__link {
         color: #333;
     }
 
@@ -1325,11 +1329,11 @@
 
     .news .news__buttons {
         width: calc(1536*(100vw/1920));
-        font-size: calc(40*(100vw/1920));
+        font-size: calc(32*(100vw/1920));
         margin-bottom: calc(40*(100vw/1920));
         grid-template-columns: repeat(3, calc(500*(100vw/1920)));
     }
-    
+
     .news .news__buttons .button {
         height: calc(58*(100vw/1920));
     }
@@ -1337,7 +1341,7 @@
     .news .business .sub__title::after {
         width: calc(578*(100vw/1920));
     }
-    
+
     .news .artist .sub__title::after {
         width: calc(622*(100vw/1920));
     }
@@ -1604,7 +1608,7 @@
     }
 
     .concept .side-slide_area {
-        height: calc(4000*(100vw/1920));
+        /* height: calc(4000*(100vw/1920)); */
     }
 
     .concept .side-slide_area .logo {
@@ -1617,8 +1621,8 @@
 
     .concept .side-slide_area .image__list {
         height: calc(1000*(100vw/1920));
-        gap: calc(80*(100vw/1920));
-        grid-template-columns: 0 calc(214*(100vw/1920)) calc(522*(100vw/1920)) calc(347*(100vw/1920)) calc(214*(100vw/1920)) calc(522*(100vw/1920)) calc(347*(100vw/1920));
+        /* gap: calc(80*(100vw/1920)); */
+        /* grid-template-columns: 0 calc(214*(100vw/1920)) calc(522*(100vw/1920)) calc(347*(100vw/1920)) calc(214*(100vw/1920)) calc(522*(100vw/1920)) calc(347*(100vw/1920)); */
     }
 
     .concept .side-slide_area .image__list--contents img,
@@ -1626,36 +1630,38 @@
         border-radius: 10px;
     }
 
-    .concept .side-slide_area .image__list--contents:nth-child(1) {
-        opacity: 0;
-    }
-    
-    .concept .side-slide_area .image__list--contents:nth-child(2) {
+    .concept .side-slide_area .image__list--contents._01 {
         align-items: center;
         translate: 0 calc(-50*(100vw/1920));
+        width: calc(214*(100vw/1920));
     }
-    
-    .concept .side-slide_area .image__list--contents:nth-child(3) {
+
+    .concept .side-slide_area .image__list--contents._02 {
         align-items: flex-start;
+        width: calc(522*(100vw/1920));
     }
-    
-    .concept .side-slide_area .image__list--contents:nth-child(4) {
+
+    .concept .side-slide_area .image__list--contents._03 {
         align-items: center;
         translate: 0 calc(100 * (100vw / 1920));
+        width: calc(347*(100vw/1920));
     }
-    
-    .concept .side-slide_area .image__list--contents:nth-child(5) {
+
+    .concept .side-slide_area .image__list--contents._04 {
         align-items: flex-start;
         translate: 0 calc(175 * (100vw / 1920));
+        width: calc(214*(100vw/1920));
     }
-    
-    .concept .side-slide_area .image__list--contents:nth-child(6) {
+
+    .concept .side-slide_area .image__list--contents._05 {
         align-items: flex-end;
+        width: calc(522*(100vw/1920));
     }
-    
-    .concept .side-slide_area .image__list--contents:nth-child(7) {
+
+    .concept .side-slide_area .image__list--contents._06 {
         align-items: center;
         translate: calc(-110 * (100vw / 1920)) calc(-100 * (100vw / 1920));
+        width: calc(347*(100vw/1920));
     }
 
     /* Concept */
