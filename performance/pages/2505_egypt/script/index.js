@@ -95,9 +95,10 @@ const egyptSwiper = new Swiper(".egyptSwiper", {
         type: "fraction", // ページネーションのtypeを指定
     },
     loop: true, // スライドをループさせる
-    autoplay: {
-        delay: 3000, // 3秒ごとに自動スライド
-    },
+    // autoplay: {
+    //     delay: 6000, // 6秒ごとに自動スライド
+    //     disableOnInteraction: true
+    // },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
