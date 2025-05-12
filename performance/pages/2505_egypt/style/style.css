@@ -1312,10 +1312,14 @@
 
     .content .mainstage .listContent {
         width: calc(450*(100vw/1920));
-        height: calc(800 * (100vw / 1920));
+        height: fit-content;
         gap: calc(20*(100vw/1920));
-        grid-template-rows: calc(270 * (100vw / 1920)) calc(100 * (100vw / 1920)) calc(120 * (100vw / 1920)) 1fr;
-        padding-bottom: calc(80*(100vw/1920));
+        grid-template-rows: calc(270 * (100vw / 1920)) calc(100 * (100vw / 1920)) calc(110 * (100vw / 1920)) 1fr;
+        padding-bottom: calc(40*(100vw/1920));
+    }
+
+    .content .mainstage .listContent:nth-child(1){
+        grid-template-rows: calc(270 * (100vw / 1920)) calc(100 * (100vw / 1920)) calc(150 * (100vw / 1920)) 1fr;
     }
 
     .content .mainstage .listContent:nth-child(3n + 2) {
