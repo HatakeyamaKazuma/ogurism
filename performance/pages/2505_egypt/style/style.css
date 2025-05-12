@@ -501,17 +501,20 @@
     font-size: calc(96*(100vw/750));
     line-height: 1;
     position: relative;
+    z-index: 0;
+    padding-left: calc(6 * (100vw / 750));
 }
 
 .content .mainstage .listContent .num::after {
     content: "";
-    width: calc(75*(100vw/750));
+    width: calc(95 * (100vw / 750));
     aspect-ratio: 1;
     background-color: #7D1E1E;
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 62%;
     translate: 0 -50%;
+    z-index: -1;
 }
 
 .content .mainstage .listContent .name {
@@ -1323,7 +1326,12 @@
     }
 
     .content .mainstage .listContent .num {
-        font-size: calc(80*(100vw/1920));
+        font-size: calc(80*(100vw / 1920));
+        padding-left: calc(6 * (100vw / 1920));
+    }
+
+    .content .mainstage .listContent .num::after {
+        width: calc(95 * (100vw / 1920));
     }
 
     .content .mainstage .listContent .name {
