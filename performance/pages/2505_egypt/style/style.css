@@ -495,6 +495,7 @@
     height: calc(900 * (100vw / 800));
     position: absolute;
     top: 0;
+    left: 0;
     background-color: #7D1E1E;
     z-index: -1;
 }
