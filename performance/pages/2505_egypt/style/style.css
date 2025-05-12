@@ -492,7 +492,7 @@
 .content .mainstage .listContent .image::after {
     content: "";
     width: calc(525 * (100vw / 750));
-    height: calc(900 * (100vw / 800));
+    height: calc(920 * (100vw / 800));
     position: absolute;
     top: 0;
     left: 0;
