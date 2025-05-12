@@ -1,3 +1,87 @@
+// NewsSwiper
+let newsSwiper;
+let isSwiperActive = false;
+const SWIPER_BREAKPOINT = 750;
+
+document.addEventListener("DOMContentLoaded", function () {
+    const allBtn = document.getElementById("all__button");
+    const businessBtn = document.getElementById("business__button");
+    const artistBtn = document.getElementById("artist__button");
+
+    const wrapper = document.querySelector(".swiper-wrapper");
+    const allSlides = Array.from(wrapper.children);
+
+    function initializeSwiper() {
+        if (newsSwiper) {
+            newsSwiper.destroy(true, true);
+            isSwiperActive = false;
+        }
+
+        // 画面幅に応じてSwiperを有効化または無効化
+        if (window.innerWidth <= SWIPER_BREAKPOINT) {
+            newsSwiper = new Swiper(".news__swiper", {
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: 1.6,
+                speed: 800,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+            isSwiperActive = true;
+        }
+    }
+
+    function replaceSlides(category) {
+        wrapper.innerHTML = '';
+
+        const filteredSlides = allSlides.filter(slide => {
+            return category === 'all' || slide.getAttribute('data-category') === category;
+        });
+
+        filteredSlides.forEach(slide => {
+            wrapper.appendChild(slide.cloneNode(true));
+        });
+
+        initializeSwiper();
+    }
+
+    function addFilterListeners() {
+        allBtn.addEventListener("click", () => replaceSlides("all"));
+        businessBtn.addEventListener("click", () => replaceSlides("business"));
+        artistBtn.addEventListener("click", () => replaceSlides("artist"));
+
+        const buttons = document.querySelectorAll(".news__buttons .button");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                // すべてのボタンからis-activeを削除
+                buttons.forEach(btn => btn.classList.remove("is-active"));
+
+                // クリックされたボタンにis-activeを追加
+                button.classList.add("is-active");
+
+                // ボタンのIDからカテゴリを判定
+                const category = button.id.replace("__button", "");
+                replaceSlides(category);
+            });
+        });
+    }
+
+    replaceSlides("all");
+    addFilterListeners();
+
+    // ウィンドウサイズ変更時にも対応
+    window.addEventListener('resize', () => {
+        replaceSlides(document.querySelector('.button.active')?.id.replace('__button', '') || 'all');
+    });
+});
+
 function hamburgerFunc() {
     //ここにハンバーガーメニューの記述
     const hamburgerButton = document.getElementById("headerButton");
@@ -299,26 +383,6 @@ function slider() {
     });
 
     const artistSwiper = new Swiper(".artist__swiper", {
-        loop: true, // スライドをループさせる
-        // autoplay: {
-        //     delay: 3000, // 3秒ごとに自動スライド
-        //     disableOnInteraction: false, // ユーザー操作後も自動再生を継続
-        // },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true, // ページネーションをクリック可能に
-        },
-        effect: 'slide', // スライドのエフェクト（デフォルト）
-        speed: 800, // スライドの速度（ミリ秒）
-        centeredSlides: true,//真ん中寄せ
-        slidesPerView: 1.6,//枚数指定
-    });
-    
-    const newsSwiper = new Swiper(".news__swiper", {
         loop: true, // スライドをループさせる
         // autoplay: {
         //     delay: 3000, // 3秒ごとに自動スライド
