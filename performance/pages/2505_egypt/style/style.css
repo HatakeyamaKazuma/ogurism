@@ -488,7 +488,7 @@
     text-align: left;
     position: relative;
     z-index: 1;
-    grid-template-rows: calc(314*(100vw/750)) calc(100*(100vw/750)) calc(110*(100vw/750)) calc(350*(100vw/750));
+    grid-template-rows: calc(314*(100vw/750)) calc(100*(100vw/750)) calc(110*(100vw/750)) 1fr;
     background-color: #7D1E1E;
     padding-bottom: calc(80 * (100vw / 750));
 }
