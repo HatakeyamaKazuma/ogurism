@@ -80,6 +80,22 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', () => {
         replaceSlides(document.querySelector('.button.active')?.id.replace('__button', '') || 'all');
     });
+
+    // Concept Swiper
+    const loopSwiper = new Swiper(".loopSwiper", {
+        loop: true, // スライドをループさせる
+        autoplay: {
+            delay: 0, // 3秒ごとに自動スライド
+        },
+        effect: 'slide', // スライドのエフェクト（デフォルト）
+        speed: 5000, // スライドの速度（ミリ秒）
+        slidesPerView: 'auto',//枚数指定
+        allowTouchMove: false, // スワイプ無効
+        spaceBetween: "7%",
+        loopedSlides: 6, // 表示スライド数以上に設定するのが一般的
+        observer: true,
+        observeParents: true,
+    });
 });
 
 function hamburgerFunc() {
@@ -317,37 +333,6 @@ function heroHeaderFunc() {
     });
 }
 
-
-
-
-function sideScrollFunc() {
-    const section = document.querySelector('.side-slide_area');
-    const imageList = section.querySelector('.image__list');
-
-    const rect = section.getBoundingClientRect();
-    const startY = window.scrollY + rect.top;
-    const endY = startY + section.offsetHeight - window.innerHeight;
-    const maxScroll = endY - startY;
-
-    let currentX = 0; // 現在の位置
-    let targetX = 0;  // 目標位置
-
-    function animate() {
-        const scrollY = window.scrollY;
-        const scrollProgress = Math.min(Math.max(scrollY - startY, 0), maxScroll);
-        targetX = -scrollProgress;
-
-        // 緩やかに currentX を targetX に近づける
-        currentX += (targetX - currentX) * 0.05;
-
-        imageList.style.transform = `translateX(${currentX}px)`;
-
-        requestAnimationFrame(animate);
-    }
-
-    animate(); // アニメーション開始
-}
-
 function copyButton() {
     const copyButton = document.getElementById("copyButton");
 
@@ -365,7 +350,6 @@ function copyButton() {
 }
 
 function slider() {
-
     const businessSwiper = new Swiper(".business__swiper", {
         loop: true, // スライドをループさせる
         navigation: {
@@ -408,7 +392,6 @@ accordionFunc();
 fadeFunc();
 headerLogo();
 heroHeaderFunc();
-sideScrollFunc();
 copyButton();
 
 document.addEventListener("DOMContentLoaded", function () {
