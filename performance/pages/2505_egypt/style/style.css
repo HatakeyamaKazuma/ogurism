@@ -493,17 +493,6 @@
     padding-bottom: calc(80 * (100vw / 750));
 }
 
-.content .mainstage .listContent .image::after {
-    content: "";
-    width: calc(525 * (100vw / 750));
-    height: calc(940 * (100vw / 750));
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #7D1E1E;
-    z-index: -1;
-}
-
 .content .mainstage .listContent:nth-child(3n + 2) {
     margin-inline: auto;
 }
