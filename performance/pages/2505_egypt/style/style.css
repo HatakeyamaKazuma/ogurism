@@ -500,6 +500,18 @@
 .content .mainstage .listContent .num {
     font-size: calc(96*(100vw/750));
     line-height: 1;
+    position: relative;
+}
+
+.content .mainstage .listContent .num::after {
+    content: "";
+    width: calc(75*(100vw/750));
+    aspect-ratio: 1;
+    background-color: #7D1E1E;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
 }
 
 .content .mainstage .listContent .name {
@@ -1147,7 +1159,7 @@
     }
 
     .mainVisual__text .date {
-        font-size: calc(16*(100vw/1920));
+        font-size: calc(24*(100vw/1920));
         margin-bottom: calc(30*(100vw/1920));
     }
 
@@ -1611,7 +1623,7 @@
         margin-bottom: calc(100*(100vw/1920));
     }
 
-    .articleSwiper .swiper-wrapper{
+    .articleSwiper .swiper-wrapper {
         display: grid;
         grid-template-columns: repeat(4, calc(354*(100vw/1920)));
         gap: calc(40*(100vw/1920));
