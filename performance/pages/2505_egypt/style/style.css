@@ -1307,7 +1307,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: calc(200*(100vw/1920)) 0;
-        margin-bottom: calc(550*(100vw/1920));
+        margin-bottom: calc(200*(100vw/1920));
     }
 
     .content .mainstage .listContent {
