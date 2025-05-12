@@ -379,7 +379,7 @@
 
 .content {
     padding-bottom: calc(20*(100vw/750));
-    background-image: linear-gradient(180deg, rgba(181, 51, 51, 1), rgba(190, 41, 41, 1) 47%, rgba(130, 31, 36, 1) 58%);
+    background-image: linear-gradient(180deg, rgba(181, 51, 51, 1), rgba(190, 41, 41, 1) 60%, rgba(130, 31, 36, 1) 75%);
 }
 
 .content .opening {
@@ -492,7 +492,7 @@
 .content .mainstage .listContent .image::after {
     content: "";
     width: calc(525 * (100vw / 750));
-    height: calc(920 * (100vw / 800));
+    height: calc(880 * (100vw / 750));
     position: absolute;
     top: 0;
     left: 0;
@@ -1232,7 +1232,7 @@
 
     .content {
         padding-bottom: calc(20*(100vw/1920));
-        background-image: linear-gradient(180deg, rgba(181, 51, 51, 1), rgba(190, 41, 41, 1) 60%, rgba(130, 31, 36, 1) 75%);
+        background-image: linear-gradient(180deg, rgba(181, 51, 51, 1), rgba(190, 41, 41, 1) 47%, rgba(130, 31, 36, 1) 58%);
     }
 
     .content .opening {
