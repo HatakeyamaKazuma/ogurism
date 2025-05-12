@@ -17,6 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
             isSwiperActive = false;
         }
 
+        const visibleSlides = wrapper.querySelectorAll('.swiper-slide');
+        if (visibleSlides.length <= 1) {
+            // スライドが1枚以下ならSwiperを初期化しない
+            return;
+        }
+
         // 画面幅に応じてSwiperを有効化または無効化
         if (window.innerWidth <= SWIPER_BREAKPOINT) {
             newsSwiper = new Swiper(".news__swiper", {
