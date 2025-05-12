@@ -1314,30 +1314,18 @@
         width: calc(450*(100vw/1920));
         height: calc(800 * (100vw / 1920));
         gap: calc(20*(100vw/1920));
-        grid-template-rows: calc(270 * (100vw / 1920)) calc(100 * (100vw / 1920)) calc(120 * (100vw / 1920)) calc(200 * (100vw / 1920));
-        background-color: transparent;
-        padding-bottom: 0;
-    }
-
-    .content .mainstage .listContent .image::after {
-        content: "";
-        width: calc(450 * (100vw / 1920));
-        height: calc(800 * (100vw / 1920));
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: #7D1E1E;
-        z-index: -1;
+        grid-template-rows: calc(270 * (100vw / 1920)) calc(100 * (100vw / 1920)) calc(120 * (100vw / 1920)) 1fr;
+        padding-bottom: calc(80*(100vw/1920));
     }
 
     .content .mainstage .listContent:nth-child(3n + 2) {
         margin-inline: 0;
-        padding-top: calc(120*(100vw/1920));
+        margin-top: calc(120*(100vw/1920));
     }
 
     .content .mainstage .listContent:nth-child(3n) {
         margin-left: 0;
-        padding-top: calc(240*(100vw/1920));
+        margin-top: calc(240*(100vw/1920));
     }
 
     .content .mainstage .listContent .image {
