@@ -1320,6 +1320,7 @@
     }
 
     .content .mainstage .listContent .image::after {
+        content: "";
         width: calc(450 * (100vw / 1920));
         height: calc(800 * (100vw / 1920));
         position: absolute;
