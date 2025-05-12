@@ -302,7 +302,7 @@
 }
 
 .mainVisual__text .title {
-    font-size: calc(95*(100vw/750));
+    font-size: calc(90*(100vw/750));
     letter-spacing: 0.06em;
     line-height: 1;
     margin-bottom: calc(30*(100vw/750));
