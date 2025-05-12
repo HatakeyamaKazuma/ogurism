@@ -477,7 +477,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: calc(80*(100vw/750));
-    margin-bottom: calc(310*(100vw/750));
+    margin-bottom: calc(180*(100vw/750));
 }
 
 .content .mainstage .listContent {
