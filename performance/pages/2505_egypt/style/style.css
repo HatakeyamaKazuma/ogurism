@@ -1315,7 +1315,7 @@
         height: fit-content;
         gap: calc(20*(100vw/1920));
         grid-template-rows: calc(270 * (100vw / 1920)) calc(100 * (100vw / 1920)) calc(110 * (100vw / 1920)) 1fr;
-        padding-bottom: calc(40*(100vw/1920));
+        padding-bottom: calc(80*(100vw/1920));
     }
 
     .content .mainstage .listContent:nth-child(1){
