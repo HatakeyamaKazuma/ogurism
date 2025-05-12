@@ -378,6 +378,7 @@
 }
 
 .content {
+    padding-bottom: calc(20*(100vw/750));
     background-image: linear-gradient(180deg, rgba(181, 51, 51, 1), rgba(190, 41, 41, 1) 47%, rgba(130, 31, 36, 1) 58%);
 }
 
@@ -613,6 +614,11 @@
     letter-spacing: 0.06em;
     line-height: 1.5;
     text-align: center;
+}
+
+.content .finale .egyptSwiper .swiper-slide iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .content .finale .egyptSwiper .swiper-pagination-current {
@@ -1220,6 +1226,7 @@
     }
 
     .content {
+        padding-bottom: calc(20*(100vw/1920));
         background-image: linear-gradient(180deg, rgba(181, 51, 51, 1), rgba(190, 41, 41, 1) 47%, rgba(130, 31, 36, 1) 58%);
     }
 
@@ -1331,7 +1338,8 @@
     }
 
     .content .mainstage .listContent .num::after {
-        width: calc(95 * (100vw / 1920));
+        width: calc(85 * (100vw / 1920));
+        top: 50%;
     }
 
     .content .mainstage .listContent .name {
