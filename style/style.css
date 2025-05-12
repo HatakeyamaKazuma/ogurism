@@ -828,7 +828,7 @@
 .concept {
     position: relative;
     background-color: #EAEAE7;
-    padding-block: calc(285*(100vw/750)) 0;
+    padding-block: calc(285*(100vw/750));
     text-align: center;
     letter-spacing: 0.1em;
 }
@@ -872,8 +872,9 @@
     /* position: sticky; */
     position: relative;
     top: 0;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
+    /* padding-bottom: calc(100*(100vw/750)); */
 }
 
 .concept .side-slide_area .image__list {
@@ -1331,7 +1332,7 @@
 
     .news .news__buttons {
         width: calc(1536*(100vw/1920));
-        font-size: calc(32*(100vw/1920));
+        font-size: calc(28*(100vw/1920));
         margin-bottom: calc(40*(100vw/1920));
         grid-template-columns: repeat(3, calc(500*(100vw/1920)));
     }
@@ -1578,7 +1579,7 @@
 
     /* Concept */
     .concept {
-        padding-block: calc(200*(100vw/1920)) calc(200*(100vw/1920));
+        padding-block: calc(200*(100vw/1920));
         z-index: 1;
     }
 
@@ -1619,7 +1620,8 @@
     }
 
     .sticky_wrap {
-        height: 100vh;
+        /* height: 100vh; */
+        /* padding-bottom: calc(100*(100vw/1920)); */
     }
 
     .concept .side-slide_area .image__list {
