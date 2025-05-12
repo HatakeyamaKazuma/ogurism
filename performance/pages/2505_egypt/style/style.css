@@ -372,7 +372,7 @@
     width: calc(550 * (100vw / 750));
     margin-inline: auto;
     font-size: calc(24 * (100vw / 750));
-    line-height: 1.75;
+    line-height: 2;
     letter-spacing: 0.04em;
     font-feature-settings: "palt";
 }
@@ -1350,7 +1350,7 @@
 
     .content .mainstage .listContent .num {
         font-size: calc(80*(100vw / 1920));
-        padding-inline: calc(20 * (100vw / 1920));
+        padding-inline: calc(30 * (100vw / 1920));
     }
 
     .content .mainstage .listContent .num::after {
@@ -1360,13 +1360,13 @@
 
     .content .mainstage .listContent .name {
         font-size: calc(32*(100vw/1920));
-        padding-inline: calc(20 * (100vw / 1920));
+        padding-inline: calc(30 * (100vw / 1920));
     }
 
     .content .mainstage .listContent .text {
         font-size: calc(16 * (100vw / 1920));
         line-height: 2;
-        padding-inline: calc(20 * (100vw / 1920));
+        padding-inline: calc(30 * (100vw / 1920));
     }
 
     .content .mainstage .lastImage {
