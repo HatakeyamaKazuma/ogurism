@@ -829,6 +829,8 @@
     background-size: cover;
     letter-spacing: 0.1em;
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
 }
 
 .contact .title {
@@ -1166,7 +1168,7 @@
     }
 
     .mainVisual__text .date {
-        font-size: calc(24*(100vw/1920));
+        font-size: calc(30*(100vw/1920));
         margin-bottom: calc(30*(100vw/1920));
     }
 
@@ -1318,7 +1320,7 @@
         padding-bottom: calc(80*(100vw/1920));
     }
 
-    .content .mainstage .listContent:nth-child(1){
+    .content .mainstage .listContent:nth-child(1) {
         grid-template-rows: calc(270 * (100vw / 1920)) calc(100 * (100vw / 1920)) calc(150 * (100vw / 1920)) 1fr;
     }
 
