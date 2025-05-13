@@ -485,7 +485,7 @@
 
 .news__text {
     color: #fff;
-    font-size: calc(24*(100vw/750));
+    font-size: calc(28*(100vw/750));
     letter-spacing: 0.1em;
     line-height: 1.75;
 }
@@ -706,6 +706,10 @@
     z-index: 0;
     pointer-events: none;
     background-position: center top;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* 透明度30%の黒を重ねる */
+    background-blend-mode: darken;
+    /* または multiply も可 */
 }
 
 .projects .contents.is-active::before {
