@@ -703,6 +703,7 @@
         margin-inline: auto;
         justify-content: space-between;
         gap: calc(120*(100vw/1920)) 0;
+        margin-bottom: 0;
     }
 
     .business__list--contents {
