@@ -1425,7 +1425,7 @@
     }
 
     .content .finale .egyptSwiper {
-        margin-bottom: calc(300*(100vw/1920));
+        margin-bottom: calc(100*(100vw/1920));
         overflow: hidden;
         position: relative
     }
