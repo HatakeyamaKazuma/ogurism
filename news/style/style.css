@@ -338,7 +338,7 @@
 
 .main {
     background-color: #EAEAE7;
-    padding-block: calc(300*(100vw/750)) calc(50*(100vw/750));
+    padding-block: calc(300*(100vw/750)) 0;
 }
 
 .breadcrumbs {
@@ -673,7 +673,7 @@
 
     /* NEWS */
     .main {
-        padding-block: 250px 20px;
+        padding-block: 250px 0;
     }
 
     .breadcrumbs {
