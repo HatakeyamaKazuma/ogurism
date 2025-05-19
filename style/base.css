@@ -26,6 +26,17 @@
     font-style: normal;
 }
 
+.fade,
+.fade__bg {
+    opacity: 0;
+    transition-duration: 1250ms;
+}
+
+.fade.is-active,
+.fade__bg.is-active {
+    opacity: 1;
+}
+
 /* ヘッダー */
 .header {
     position: fixed;
