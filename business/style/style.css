@@ -10,14 +10,6 @@
     padding-block: calc(300*(100vw/750)) 0;
 }
 
-.breadcrumbs {
-    width: calc(674*(100vw/750));
-    font-size: calc(24*(100vw/750));
-    margin-inline: auto;
-    margin-top: calc(180*(100vw/750));
-    padding-bottom: calc(20*(100vw/750));
-}
-
 .main__image {
     width: calc(675*(100vw/750));
     margin-inline: auto;
@@ -121,13 +113,6 @@
     /* Business */
     .main {
         padding-block: 250px 0;
-    }
-
-    .breadcrumbs {
-        width: calc(1700*(100vw/1920));
-        font-size: calc(16*(100vw/1920));
-        margin-top: calc(150*(100vw/1920));
-        padding-bottom: calc(20 * (100vw / 1920));
     }
 
     .main__image {
