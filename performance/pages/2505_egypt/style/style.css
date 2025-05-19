@@ -707,6 +707,11 @@
         margin-bottom: calc(30*(100vw/1920));
     }
 
+    .mainVisual__text .en__title {
+        font-size: calc(50*(100vw/1920));
+        margin-bottom: calc(20*(100vw/1920));
+    }
+
     .mainVisual__text .subTitle {
         font-size: calc(32*(100vw/1920));
     }
