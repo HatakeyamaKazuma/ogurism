@@ -20,11 +20,10 @@ function hamburgerFunc() {
     })
 }
 
-
 function accordionFunc() {
 
     const accordionElements = document.querySelectorAll(".accordion");
-    
+
     accordionElements.forEach((openElem) => {
         openElem.addEventListener('click', function () {
             const accordionGetClass = openElem.classList.contains('is-active');
@@ -70,8 +69,45 @@ function fadeFunc() {
         fadeAnime.forEach(el => fadeAnimeObserver.observe(el));
     });
 }
-//追加で必要な関数
 
 hamburgerFunc();
 accordionFunc();
 fadeFunc();
+
+function matchTextHeights() {
+    // 画面幅が750px未満なら高さをリセットして終了
+    if (window.innerWidth < 750) {
+        document.querySelectorAll('.artists__list--contents .text').forEach(el => {
+            el.style.height = 'auto';
+        });
+        return;
+    }
+
+    const items = document.querySelectorAll('.artists__list--contents');
+    const groupSize = 2;
+
+    for (let i = 0; i < items.length; i += groupSize) {
+        const group = Array.from(items).slice(i, i + groupSize);
+        let maxHeight = 0;
+
+        group.forEach(item => {
+            const text = item.querySelector('.text');
+            text.style.height = 'auto'; // 高さリセット
+            if (text.offsetHeight > maxHeight) {
+                maxHeight = text.offsetHeight;
+            }
+        });
+
+        group.forEach(item => {
+            const text = item.querySelector('.text');
+            text.style.height = maxHeight + 'px';
+        });
+    }
+}
+
+window.addEventListener('load', matchTextHeights);
+window.addEventListener('resize', () => {
+    // リサイズ時にも再評価
+    clearTimeout(window._textHeightTimeout);
+    window._textHeightTimeout = setTimeout(matchTextHeights, 100);
+});
