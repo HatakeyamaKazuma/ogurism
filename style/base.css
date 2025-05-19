@@ -8,6 +8,10 @@
     display: block;
 }
 
+.red {
+    color: #D32727;
+}
+
 .cormorant {
     font-family: "Cormorant", serif;
     font-optical-sizing: auto;
