@@ -76,7 +76,7 @@
 }
 
 .business__list--contents .achievements__list {
-    margin-bottom: calc(15*(100vw/750));
+    margin-bottom: calc(10*(100vw/750));
 }
 
 .business__list--contents .achievements__list--contents {
@@ -182,7 +182,7 @@
     }
 
     .business__list--contents .achievements__list {
-        margin-bottom: calc(15*(100vw/1920));
+        margin-bottom: calc(10*(100vw/1920));
     }
 
     .business__list--contents .achievements__list--contents {
