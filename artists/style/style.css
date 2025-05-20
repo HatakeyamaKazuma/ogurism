@@ -156,7 +156,7 @@
 .main .link a {
     display: flex;
     width: fit-content;
-    gap: calc(20*(100vw / 750));
+    gap: calc(40*(100vw / 750));
     margin-inline: auto;
     align-items: center;
     justify-content: space-between;
