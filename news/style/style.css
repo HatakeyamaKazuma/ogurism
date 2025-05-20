@@ -69,12 +69,14 @@
 .news .news__buttons .button {
     height: calc(90*(100vw/750));
     border: 1px solid #2E2E2E;
+    transition-duration: 500ms;
 }
 
 .news .news__buttons .button.is-active {
     background-color: #E0E0D0;
     color: #2E2E2E;
-    border: none;
+    /* border: none; */
+    border-color: rgba(46, 46, 46, 0);
 }
 
 .news {
