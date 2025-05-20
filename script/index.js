@@ -181,6 +181,7 @@ function headerLogo() {
         const about = document.getElementById("About");
         const concept = document.getElementById("Concept");
         const projects = document.getElementById("Projects");
+        const company = document.getElementById("Company");
 
         const logoFigure = document.querySelector(".header__logo");
         const defaultLogo = logoFigure.querySelector(".default");
@@ -203,7 +204,7 @@ function headerLogo() {
             const triggerRatio = isPC ? 0.1 : 0.1;
 
             // 対象セクション（デバイスによって切り替え）
-            const targets = isPC ? [projects, concept] : [about, concept];
+            const targets = isPC ? [projects, concept, company] : [about, concept];
 
             // いずれかが範囲に入っていたらロゴ切り替え
             const shouldChangeLogo = targets.some(section => isInTriggerZone(section, triggerRatio));
