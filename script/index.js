@@ -230,9 +230,13 @@ function headerLogo() {
 }
 
 function heroHeaderFunc() {
-    const isVisited = localStorage.getItem("visited");
+    const referrer = document.referrer;
+    const navType = performance.getEntriesByType('navigation')[0]?.type;
+    const isInternal = referrer.includes(location.hostname);
+    const isFromNewTab = !isInternal && navType === "navigate";
 
-    if (isVisited) {
+    if (!isFromNewTab) {
+        // 内部遷移なのでローディングをスキップ
         const preloader = document.getElementById("preloader");
         if (preloader) {
             preloader.style.display = "none";
@@ -240,14 +244,10 @@ function heroHeaderFunc() {
         document.body.style.overflow = "auto";
 
         const mainVideo = document.querySelectorAll('.fix__video');
-
-        // ローディング後の処理へ
         mainVideo.forEach(video => video.play().catch((err) => {
             console.log('再生できなかった:', err);
         }));
 
-
-        // is-active は初回以外でも必要なら追加
         const fadeAnime = document.querySelector('.fade__main');
         fadeAnime?.classList.add('is-active');
         return;
@@ -269,7 +269,7 @@ function heroHeaderFunc() {
                 images.forEach(img => img.classList.remove("active"));
                 images[current].classList.add("active");
                 current++;
-                setTimeout(fadeImageLoop, 3000);
+                setTimeout(fadeImageLoop, 5000);
             } else {
                 // アニメーション完了フラグをON
                 animationEnded = true;
@@ -297,7 +297,7 @@ function heroHeaderFunc() {
                         // visited フラグ保存
                         localStorage.setItem("visited", "true");
 
-                    }, 1500);
+                    }, 2000);
                 }, 1000);
             }
         };
@@ -310,7 +310,7 @@ function heroHeaderFunc() {
         setTimeout(() => {
             minimumTimePassed = true;
             tryHidePreloader();
-        }, 6000);
+        }, 10000);
 
         window.addEventListener("load", () => {
             loadFinished = true;
@@ -334,11 +334,12 @@ function heroHeaderFunc() {
                     }
 
                     localStorage.setItem("visited", "true");
-                }, 1500);
+                }, 2000);
             }
         }
     });
 }
+
 
 function copyButton() {
     const copyButton = document.getElementById("copyButton");
