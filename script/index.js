@@ -269,7 +269,7 @@ function heroHeaderFunc() {
                 images.forEach(img => img.classList.remove("active"));
                 images[current].classList.add("active");
                 current++;
-                setTimeout(fadeImageLoop, 5000);
+                setTimeout(fadeImageLoop, 4000);
             } else {
                 // アニメーション完了フラグをON
                 animationEnded = true;
@@ -310,7 +310,7 @@ function heroHeaderFunc() {
         setTimeout(() => {
             minimumTimePassed = true;
             tryHidePreloader();
-        }, 10000);
+        }, 8000);
 
         window.addEventListener("load", () => {
             loadFinished = true;
