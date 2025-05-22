@@ -67,7 +67,7 @@
 /* 表示されている画像 */
 .loader-img.active {
     opacity: 1;
-    animation: hero_header_on 3s ease;
+    animation: hero_header_on 4s ease;
 }
 
 /* 表示されている画像 */
